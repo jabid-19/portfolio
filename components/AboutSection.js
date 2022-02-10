@@ -17,13 +17,13 @@ import imageLoader from "../helper/imageLoader";
 
 const useStyles = makeStyles((theme) => ({
   text: {
-    fontSize: "8rem",
+    fontSize: "6rem",
     fontWeight: "400",
     transform: "rotate(90deg)",
     // height: "100%",
   },
   textLg: {
-    fontSize: "8rem",
+    fontSize: "6rem",
     fontWeight: "400",
     marginBottom: "20px",
 
@@ -33,24 +33,21 @@ const useStyles = makeStyles((theme) => ({
   textBox: {
     // backgroundColor: "red",
   },
+
   mainText: {
-    fontSize: "1.3rem",
+    fontSize: "1.5rem",
     fontWeight: "bold",
     lineHeight: "2rem",
     wordSpacing: ".4rem",
     letterSpacing: ".2rem",
     width: "800px",
     color: "#626262",
-    // letterSpacing: ".1rem",
-  },
-  mainTextLg: {
-    fontSize: "1.3rem",
-    fontWeight: "bold",
-    lineHeight: "2rem",
-    wordSpacing: ".4rem",
-    letterSpacing: ".2rem",
-    width: "500px",
-    color: "#626262",
+    [theme.breakpoints.down("md")]: {
+      width: "500px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "300px",
+    },
     // letterSpacing: ".1rem",
   },
 }));
@@ -58,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
 const AboutSection = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const lg = useMediaQuery(theme.breakpoints.down("lg"));
+  const sm = useMediaQuery(theme.breakpoints.down("sm"));
   const md = useMediaQuery(theme.breakpoints.down("md"));
 
   const stacks = [
@@ -158,14 +155,11 @@ const AboutSection = () => {
         <Box className={classes.textBox}>
           {md && (
             <Typography variant="h1" className={classes.textLg}>
-              AB<span style={{ color: "#BD7045" }}>O</span>UT
+              AB<span style={{ color: "#BD7045" }}>O</span>UT ME
             </Typography>
           )}
 
-          <Typography
-            className={md ? classes.mainTextLg : classes.mainText}
-            variant="body1"
-          >
+          <Typography className={classes.mainText} variant="body1">
             <span
               style={{
                 color: "#BD7045",
@@ -180,7 +174,7 @@ const AboutSection = () => {
             my knowledge of business strategy because I want to build products
             that are economically impactful & extensible.
           </Typography>
-          <Box sx={{ marginLeft: "100px", marginTop: "50px" }}>
+          <Box sx={{ marginLeft: "50px", marginTop: "50px" }}>
             <Box sx={{ width: "250px" }}>
               <Typography variant="h4">My stacks</Typography>
               <LinearProgress sx={{ margin: "8px 0", width: "170px" }} />

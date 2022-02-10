@@ -37,9 +37,9 @@ export default function Home() {
         <Box className={classes.child}>
           <FirstSection />
         </Box>
-        {/* <Box className={classes.child}>
-        <AboutSection />
-      </Box> */}
+        <Box className={classes.child}>
+          <AboutSection />
+        </Box>
         <Box className={classes.child}>
           <ProjectSection />
         </Box>
