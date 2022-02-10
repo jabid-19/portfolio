@@ -63,63 +63,78 @@ const AboutSection = () => {
 
   const stacks = [
     {
+      id: 1,
       source: "./images/about-section/js.svg",
       title: "JavaScript",
     },
     {
+      id: 2,
       source: "./images/about-section/react.svg",
       title: "ReactJS",
     },
     {
+      id: 3,
       source: "./images/about-section/next-js.svg",
       title: "NextJS",
     },
     {
+      id: 4,
       source: "./images/about-section/node.svg",
       title: "NodeJS",
     },
     {
+      id: 5,
       source: "./images/about-section/mongo.svg",
       title: "MongoDB",
     },
     {
+      id: 6,
       source: "./images/about-section/heroku.svg",
       title: "Heroku",
     },
     {
+      id: 7,
       source: "./images/about-section/mui.svg",
       title: "Material Ui",
     },
     {
+      id: 8,
       source: "./images/about-section/bootstrap.svg",
       title: "Bootstrap",
     },
 
     {
+      id: 9,
       source: "./images/about-section/figma.svg",
       title: "Figma",
     },
     {
+      id: 10,
       source: "./images/about-section/xd.svg",
       title: "XD",
     },
     {
+      id: 11,
       source: "./images/about-section/ps.svg",
       title: "Photoshop",
     },
     {
+      id: 12,
       source: "./images/about-section/ai.svg",
       title: "illustrator",
     },
     {
+      id: 13,
       source: "./images/about-section/html.svg",
       title: "HTML5",
     },
     {
+      id: 14,
       source: "./images/about-section/css.svg",
       title: "CSS3",
     },
     {
+      id: 15,
       source: "./images/about-section/wordpress.svg",
       title: "Wordpress",
     },
@@ -185,6 +200,7 @@ const AboutSection = () => {
             >
               {stacks.map((stack) => (
                 <Grid
+                  key={stack.id}
                   item
                   md={2}
                   sm={3}
@@ -198,7 +214,6 @@ const AboutSection = () => {
                   <Box
                     sx={{
                       textAlign: "center",
-                      // padding: "10px 2px",
                     }}
                   >
                     <Image

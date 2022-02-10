@@ -102,10 +102,12 @@ const ProjectSection = () => {
 
   const projects = [
     {
+      id: 1,
       source: "./images/project-section/eucaps.jpg",
       title: "Eucaps",
     },
     {
+      id: 2,
       source: "./images/project-section/neovotech.jpg",
       title: "Neovotech",
       margin: {
@@ -113,10 +115,12 @@ const ProjectSection = () => {
       },
     },
     {
+      id: 3,
       source: "./images/project-section/t4t.jpg",
       title: "Tools 4 Trader",
     },
     {
+      id: 4,
       source: "./images/project-section/xpillar.jpg",
       title: "Xpillar",
       margin: {
@@ -124,6 +128,7 @@ const ProjectSection = () => {
       },
     },
     {
+      id: 5,
       source: "./images/project-section/bugseen.jpg",
       title: "Bugseen",
     },
@@ -154,7 +159,11 @@ const ProjectSection = () => {
         <Box>
           <Box className={classes.uiContainer}>
             {projects.map((project) => (
-              <Box className={classes.uiCard} style={project.margin}>
+              <Box
+                key={project.id}
+                className={classes.uiCard}
+                style={project.margin}
+              >
                 <img className={classes.uiImage} src={project.source} />
                 <Box className={classes.cardHead}>
                   <Typography variant="">{project.title}</Typography>
