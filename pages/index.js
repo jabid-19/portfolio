@@ -30,7 +30,7 @@ export default function Home() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="xl" fixed className={classes.container}>
+    <Container maxWidth="xl" className={classes.container}>
       <Nav />
 
       <Box>

@@ -82,7 +82,7 @@ const useStyle = makeStyles((theme) => ({
     },
   },
   rightElements: {
-    margin: "20px 0px",
+    margin: "13px 0px",
     border: "1px solid #BD7045",
     [theme.breakpoints.down("md")]: {
       margin: "0",
@@ -184,7 +184,6 @@ const Contact = () => {
                 animation: "pulse 2s infinite",
                 "& :hover": {
                   transition: "all 1700ms cubic-bezier(0.19, 1, 0.22, 1)",
-
                   transform: "scale(1.2)",
                   // backgroundColor: "#BD7045",
                 },
@@ -218,7 +217,7 @@ const Contact = () => {
               name="name"
               className={classes.rightElements}
               InputLabelProps={{
-                style: { color: "#BD7045" },
+                style: { color: "#f9f2f9" },
               }}
             />
             <TextField
@@ -229,7 +228,7 @@ const Contact = () => {
               name="email"
               className={classes.rightElements}
               InputLabelProps={{
-                style: { color: "#BD7045" },
+                style: { color: "#f9f2f9" },
               }}
             />
             <TextField
@@ -242,7 +241,7 @@ const Contact = () => {
               name="email"
               className={classes.rightElements}
               InputLabelProps={{
-                style: { color: "#BD7045" },
+                style: { color: "#f9f2f9" },
               }}
             />
 

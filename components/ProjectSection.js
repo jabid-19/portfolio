@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 
 import {
@@ -13,6 +13,8 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import imageLoader from "../helper/imageLoader";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -134,13 +136,14 @@ const ProjectSection = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <Grid
       container
       sx={{
-        // height: "100vh",
         color: "white",
-        // backgroundColor: "blue",
       }}
     >
       <Grid
@@ -153,11 +156,14 @@ const ProjectSection = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          // backgroundColor: "red",
         }}
       >
         <Box>
-          <Box className={classes.uiContainer}>
+          <Box
+            data-aos="fade-up"
+            data-aos-duration="2500"
+            className={classes.uiContainer}
+          >
             {projects.map((project) => (
               <Box
                 key={project.id}
@@ -171,7 +177,13 @@ const ProjectSection = () => {
               </Box>
             ))}
           </Box>
-          <Box display="flex" justifyContent="end" alignItems="center">
+          <Box
+            display="flex"
+            justifyContent="end"
+            alignItems="center"
+            data-aos="fade-up-left"
+            data-aos-duration="2500"
+          >
             {/* <Box sx={{ width: "735px" }}>
               <Typography variant="h5">
                 Some of the projects I have worked on

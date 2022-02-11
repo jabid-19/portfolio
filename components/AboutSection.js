@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import {
@@ -12,8 +12,9 @@ import {
 } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 import imageLoader from "../helper/imageLoader";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mainText: {
-    fontSize: "1.5rem",
+    fontSize: "1.3rem",
     fontWeight: "bold",
     lineHeight: "2rem",
     wordSpacing: ".4rem",
@@ -61,81 +62,85 @@ const AboutSection = () => {
   const stacks = [
     {
       id: 1,
-      source: "./images/about-section/js.svg",
+      source: "./images/about-section/js.png",
       title: "JavaScript",
     },
     {
       id: 2,
-      source: "./images/about-section/react.svg",
+      source: "./images/about-section/react.webp",
       title: "ReactJS",
     },
     {
       id: 3,
-      source: "./images/about-section/next-js.svg",
+      source: "./images/about-section/next-js.webp",
       title: "NextJS",
     },
     {
       id: 4,
-      source: "./images/about-section/node.svg",
+      source: "./images/about-section/node.webp",
       title: "NodeJS",
     },
     {
       id: 5,
-      source: "./images/about-section/mongo.svg",
+      source: "./images/about-section/mongo.webp",
       title: "MongoDB",
     },
     {
       id: 6,
-      source: "./images/about-section/heroku.svg",
+      source: "./images/about-section/heroku.webp",
       title: "Heroku",
     },
     {
       id: 7,
-      source: "./images/about-section/mui.svg",
+      source: "./images/about-section/mui.webp",
       title: "Material Ui",
     },
     {
       id: 8,
-      source: "./images/about-section/bootstrap.svg",
+      source: "./images/about-section/bootstrap.webp",
       title: "Bootstrap",
     },
 
     {
       id: 9,
-      source: "./images/about-section/figma.svg",
+      source: "./images/about-section/figma.webp",
       title: "Figma",
     },
     {
       id: 10,
-      source: "./images/about-section/xd.svg",
+      source: "./images/about-section/xd.png",
       title: "XD",
     },
     {
       id: 11,
-      source: "./images/about-section/ps.svg",
+      source: "./images/about-section/ps.webp",
       title: "Photoshop",
     },
     {
       id: 12,
-      source: "./images/about-section/ai.svg",
+      source: "./images/about-section/ai.webp",
       title: "illustrator",
     },
     {
       id: 13,
-      source: "./images/about-section/html.svg",
+      source: "./images/about-section/html.webp",
       title: "HTML5",
     },
     {
       id: 14,
-      source: "./images/about-section/css.svg",
+      source: "./images/about-section/css.webp",
       title: "CSS3",
     },
     {
       id: 15,
-      source: "./images/about-section/wordpress.svg",
+      source: "./images/about-section/wordpress.webp",
       title: "Wordpress",
     },
   ];
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <Grid
@@ -152,14 +157,28 @@ const AboutSection = () => {
         xs={12}
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        <Box className={classes.textBox}>
+        <Box
+          className={classes.textBox}
+          data-aos="fade-down-right"
+          data-aos-duration="2500"
+        >
           {md && (
-            <Typography variant="h1" className={classes.textLg}>
+            <Typography
+              data-aos="fade-down-right"
+              data-aos-duration="2500"
+              variant="h1"
+              className={classes.textLg}
+            >
               AB<span style={{ color: "#BD7045" }}>O</span>UT ME
             </Typography>
           )}
 
-          <Typography className={classes.mainText} variant="body1">
+          <Typography
+            data-aos="fade-down-right"
+            data-aos-duration="2500"
+            className={classes.mainText}
+            variant="body1"
+          >
             <span
               style={{
                 color: "#BD7045",
@@ -174,7 +193,11 @@ const AboutSection = () => {
             my knowledge of business strategy because I want to build products
             that are economically impactful & extensible.
           </Typography>
-          <Box sx={{ marginLeft: "50px", marginTop: "50px" }}>
+          <Box
+            data-aos="fade-up-right"
+            data-aos-duration="2500"
+            sx={{ marginLeft: "50px", marginTop: "50px" }}
+          >
             <Box sx={{ width: "250px" }}>
               <Typography variant="h4">My stacks</Typography>
               <LinearProgress sx={{ margin: "8px 0", width: "170px" }} />
@@ -193,18 +216,7 @@ const AboutSection = () => {
               }}
             >
               {stacks.map((stack) => (
-                <Grid
-                  key={stack.id}
-                  item
-                  md={2}
-                  sm={3}
-                  xs={3}
-                  sx={
-                    {
-                      // border: "1px solid #BD7045",
-                    }
-                  }
-                >
+                <Grid key={stack.id} item md={2} sm={3} xs={3}>
                   <Box
                     sx={{
                       textAlign: "center",
@@ -232,19 +244,15 @@ const AboutSection = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
-          // backgroundColor: "red",
         }}
       >
         {!md && (
-          <Typography variant="h1" className={classes.text}>
-            AB<span style={{ color: "#BD7045" }}>O</span>UT
-          </Typography>
+          <Box data-aos="fade-down-left" data-aos-duration="2500">
+            <Typography variant="h1" className={classes.text}>
+              AB<span style={{ color: "#BD7045" }}>O</span>UT
+            </Typography>
+          </Box>
         )}
-
-        {/* <Typography variant="h1" className={classes.text}>
-          AB<span style={{ color: "#BD7045" }}>O</span>UT
-        </Typography> */}
       </Grid>
     </Grid>
   );

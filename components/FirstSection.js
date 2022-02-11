@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import {
   Container,
@@ -11,14 +11,14 @@ import {
 } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 import imageLoader from "../helper/imageLoader";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   text: {
     fontSize: "8.5rem",
     fontWeight: "400",
-    // color: "#000",
   },
   title: {
     fontSize: "1.5rem",
@@ -34,6 +34,10 @@ const FirstSection = () => {
   const theme = useTheme();
   const md = useMediaQuery(theme.breakpoints.down("md"));
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Grid
       container
@@ -44,6 +48,8 @@ const FirstSection = () => {
       }}
     >
       <Grid
+        data-aos="fade-up-right"
+        data-aos-duration="2500"
         item
         md={6}
         sm={12}
@@ -59,18 +65,19 @@ const FirstSection = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                // backgroundColor: "red",
               }
         }
       >
         <Image
           loader={imageLoader}
-          src={"./images/landing-section/avatar.png"}
+          src={"./images/landing-section/avatar.webp"}
           width={md ? "450" : "590"}
           height={md ? "620" : "800"}
         />
       </Grid>
       <Grid
+        data-aos="fade-down-left"
+        data-aos-duration="2500"
         item
         md={6}
         sm={12}

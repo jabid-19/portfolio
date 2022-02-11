@@ -89,6 +89,20 @@ const itemData = [
     img: "/images/ui-section/foodon.png",
     title: "Fern",
   },
+  {
+    img: "/images/ui-section/fitbit.png",
+    title: "Fern",
+    cols: 2,
+  },
+  {
+    img: "/images/ui-section/social.png",
+    title: "Fern",
+  },
+  {
+    img: "/images/ui-section/triyoga.png",
+    title: "Fern",
+    cols: 2,
+  },
 ];
 
 function srcset(image, size, rows = 1, cols = 1) {

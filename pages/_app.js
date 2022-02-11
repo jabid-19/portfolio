@@ -8,11 +8,21 @@ import { Box, LinearProgress } from "@mui/material";
 import { CacheProvider } from "@emotion/react";
 import createEmotionCache from "../theme/createEmotionCache";
 import theme from "../theme/theme";
+import LoadingPulse from "../components/Elements/LoadingPulse";
 
 const clientSideEmotionCache = createEmotionCache();
 
 function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+  let [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
@@ -31,7 +41,20 @@ function MyApp(props) {
           <LinearProgress />
         </Box> */}
 
-        <Component {...pageProps} />
+        {loading ? (
+          <Box
+            sx={{
+              height: "100vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <LoadingPulse />
+          </Box>
+        ) : (
+          <Component {...pageProps} />
+        )}
       </ThemeProvider>
     </CacheProvider>
   );

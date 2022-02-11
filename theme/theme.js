@@ -21,7 +21,8 @@ const theme = createTheme({
     fontFamily: [
       "Poppins",
       "Roboto",
-      '"Helvetica Neue"',
+      "Helvetica Neue",
+      "Berkshire Swash",
       "Arial",
       "sans-serif",
     ].join(","),
