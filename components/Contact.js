@@ -23,8 +23,8 @@ const useStyle = makeStyles((theme) => ({
     // borderStyle: "solid solid none solid",
     // borderRadius: "30px",
     boxShadow: "#626262",
-    // margin: "0 20px",
-    maxHeight: "580px",
+    padding: "80px 0px",
+    // maxHeight: "580px",
     width: "100%",
     backdropFilter: "blur(100px)",
     display: "flex",
@@ -164,13 +164,6 @@ const Contact = () => {
           className={classes.subBox}
           sx={{ alignItems: "center", width: "30%" }}
         >
-          {/* <Typography
-            variant="h4"
-            color="#FFFFFF80"
-            // className={classes.newsletterSubTitle}
-          >
-            My CV
-          </Typography> */}
           <Box display="flex" justifyContent="start">
             <IconButton
               color="primary"

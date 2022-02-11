@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   child: {
     display: "flex",
     alignItems: "center",
-    height: "100vh",
+    minHeight: "100vh",
     scrollSnapAlign: "start",
     paddingTop: "100px",
   },
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     display: "flex",
     alignItems: "center",
-    height: "100vh",
+    minHeight: "100vh",
     paddingTop: "100px",
   },
 }));
@@ -60,7 +60,8 @@ export default function Home() {
         <Box className={!sm ? classes.child : classes.childNoSnap}>
           <Contact />
         </Box>
-        <Footer />
+
+        {!sm && <Footer />}
       </Box>
     </Container>
   );

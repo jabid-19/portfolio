@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import {
   Container,
@@ -12,8 +12,9 @@ import {
 } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 import imageLoader from "../helper/imageLoader";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -119,12 +120,16 @@ const UiSection = () => {
   const theme = useTheme();
   const md = useMediaQuery(theme.breakpoints.down("md"));
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <Box
-    // sx={{ height: "90vh" }}
-    >
+    <Box>
       <Grid container spacing={md ? 1 : 10}>
         <Grid
+          data-aos="fade-up-right"
+          data-aos-duration="2500"
           item
           sm={12}
           md={4}
@@ -141,13 +146,15 @@ const UiSection = () => {
           </Box>
         </Grid>
         <Grid
+          data-aos="fade-up-left"
+          data-aos-duration="2500"
           item
           sm={12}
           md={8}
           sx={{ display: "flex", alignItems: "center" }}
         >
           <ImageList
-            sx={{ width: "100%", height: "60%" }}
+            sx={{ width: "100%", height: "50%" }}
             variant="quilted"
             cols={5}
             rowHeight="auto"
@@ -161,7 +168,6 @@ const UiSection = () => {
                 className={classes.image}
               >
                 <img
-                  // className={classes.image}
                   {...srcset(item.img, 121, item.rows, item.cols)}
                   alt={item.title}
                   loading="lazy"
@@ -172,36 +178,6 @@ const UiSection = () => {
         </Grid>
       </Grid>
     </Box>
-
-    // <Box sx={{ height: "100vh" }} display="flex" alignItems="center">
-    //   <Box display="flex" alignItems="center" sx={{ marginRight: "10px" }}>
-    //     <Typography variant="h2" className={classes.text}>
-    //       UI<span style={{ color: "#7f2a0b" }}> D</span>ESIGNS
-    //     </Typography>
-    //   </Box>
-
-    //   <ImageList
-    //     sx={{ width: "100%", height: "60%" }}
-    //     variant="quilted"
-    //     cols={5}
-    //     rowHeight="auto"
-    //     gap={10}
-    //   >
-    //     {itemData.map((item) => (
-    //       <ImageListItem
-    //         key={item.img}
-    //         cols={item.cols || 1}
-    //         rows={item.rows || 1}
-    //       >
-    //         <img
-    //           {...srcset(item.img, 121, item.rows, item.cols)}
-    //           alt={item.title}
-    //           loading="lazy"
-    //         />
-    //       </ImageListItem>
-    //     ))}
-    //   </ImageList>
-    // </Box>
   );
 };
 

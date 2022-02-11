@@ -139,6 +139,7 @@ const Nav = ({
           <Box className={classes.logoSection}>
             <Link to="landing" smooth={true} offset={-200} duration={50}>
               <Image
+                priority
                 // data-aos="zoom-in"
                 // data-aos-duration="1500"
                 loader={imageLoader}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import {
   Container,
@@ -16,8 +16,9 @@ import CardMedia from "@mui/material/CardMedia";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 import imageLoader from "../helper/imageLoader";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -27,19 +28,22 @@ const useStyles = makeStyles((theme) => ({
   },
   cardGrid: {
     width: "100%",
-    // backgroundColor: "red",
-    "& :hover": {
-      "& img": {
-        transform: "scale(0.9)",
-        transition: "all 0.5s ease-in-out",
-      },
-    },
+    // "& :hover": {
+    //   "& img": {
+    //     transform: "scale(0.9)",
+    //     transition: "all 0.5s ease-in-out",
+    //   },
+    // },
   },
 
   card: {
     width: "500px",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
+    },
+    "& :hover": {
+      transform: "scale(1.05)",
+      transition: "all 0.5s ease-in-out",
     },
   },
 }));
@@ -69,21 +73,21 @@ const itemData = [
     title: "Hats",
     cols: 2,
   },
-  {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
-    author: "@arwinneil",
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-    title: "Basketball",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Fern",
-  },
+  // {
+  //   img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+  //   title: "Honey",
+  //   author: "@arwinneil",
+  //   rows: 2,
+  //   cols: 2,
+  // },
+  // {
+  //   img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+  //   title: "Basketball",
+  // },
+  // {
+  //   img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+  //   title: "Fern",
+  // },
 ];
 
 function srcset(image, size, rows = 1, cols = 1) {
@@ -100,20 +104,20 @@ const UxSection = () => {
   const theme = useTheme();
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <Box
-      // sx={{ height: "90vh" }}
-      display="flex"
-      alignItems="center"
-    >
+    <Box display="flex" alignItems="center">
       <Grid container spacing={3}>
         {sm && (
-          <Grid item md={6}>
+          <Grid item sm={12}>
             <Box
               display="flex"
               flexDirection="column"
               justifyContent="center"
-              alignItems="start"
+              // alignItems="center"
             >
               <Typography variant="h2" className={classes.text}>
                 UX
@@ -133,6 +137,8 @@ const UxSection = () => {
           sx={{ display: "flex", justifyContent: "end" }}
         >
           <Card
+            data-aos="fade-down-right"
+            data-aos-duration="2500"
             className={classes.card}
             sx={{
               backgroundColor: "#626262",
@@ -159,6 +165,8 @@ const UxSection = () => {
         {!sm && (
           <Grid item md={6}>
             <Box
+              data-aos="fade-down-left"
+              data-aos-duration="2500"
               display="flex"
               flexDirection="column"
               justifyContent="center"
@@ -181,6 +189,8 @@ const UxSection = () => {
           sx={{ display: "flex", justifyContent: "end" }}
         >
           <Card
+            data-aos="fade-up-right"
+            data-aos-duration="2500"
             className={classes.card}
             sx={{
               backgroundColor: "#77636e",
@@ -211,10 +221,11 @@ const UxSection = () => {
           className={classes.cardGrid}
           item
           sm={6}
-          // sm={12}
           sx={{ display: "flex", justifyContent: "start" }}
         >
           <Card
+            data-aos="fade-up-left"
+            data-aos-duration="2500"
             className={classes.card}
             sx={{
               backgroundColor: "#f6b28a",

@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 const FirstSection = () => {
   const classes = useStyles();
   const theme = useTheme();
+  const sm = useMediaQuery(theme.breakpoints.down("sm"));
   const md = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
@@ -42,9 +43,7 @@ const FirstSection = () => {
     <Grid
       container
       sx={{
-        // height: "100vh",
         color: "white",
-        // backgroundColor: "red",
       }}
     >
       <Grid
@@ -69,10 +68,11 @@ const FirstSection = () => {
         }
       >
         <Image
+          priority
           loader={imageLoader}
           src={"./images/landing-section/avatar.webp"}
-          width={md ? "450" : "590"}
-          height={md ? "620" : "800"}
+          width={sm ? "340" : "590"}
+          height={sm ? "450" : "800"}
         />
       </Grid>
       <Grid
@@ -94,7 +94,6 @@ const FirstSection = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                // backgroundColor: "#fff",
               }
         }
       >
@@ -113,11 +112,7 @@ const FirstSection = () => {
           <Typography className={classes.text} variant="h1">
             HA<span style={{ color: "#BD7045" }}>S</span>AN
           </Typography>
-          <Box
-          // sx={{
-          //   backgroundColor: "white",
-          // }}
-          >
+          <Box>
             <Typography variant="body1" className={classes.title}>
               A FRONT-END ENGINEER
             </Typography>
