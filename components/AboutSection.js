@@ -31,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
     // transform: "rotate(90deg)",
     // height: "100%",
   },
-  textBox: {
-    // backgroundColor: "red",
+  stackText: {
+    fontSize: "2rem",
   },
 
   mainText: {
@@ -199,7 +199,9 @@ const AboutSection = () => {
             sx={{ marginLeft: "50px", marginTop: "50px" }}
           >
             <Box sx={{ width: "250px" }}>
-              <Typography variant="h4">My stacks</Typography>
+              <Typography className={classes.stackText} variant="h4">
+                My stacks
+              </Typography>
               <LinearProgress sx={{ margin: "8px 0", width: "170px" }} />
             </Box>
 
