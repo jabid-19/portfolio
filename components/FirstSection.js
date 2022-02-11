@@ -27,6 +27,35 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: ".25rem",
     color: "#BD7045",
   },
+  imageGrid: {
+    display: "flex",
+    justifyContent: "start",
+    alignItems: "end",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "start",
+      alignItems: "start",
+    },
+  },
+
+  textGrid: {
+    display: "flex",
+    justifyContent: "end",
+    alignItems: "center",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "end",
+    },
+  },
 }));
 
 const FirstSection = () => {
@@ -53,19 +82,7 @@ const FirstSection = () => {
         md={6}
         sm={12}
         xs={12}
-        sx={
-          md
-            ? {
-                display: "flex",
-                justifyContent: "start",
-                alignItems: "end",
-              }
-            : {
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }
-        }
+        className={classes.imageGrid}
       >
         <Image
           priority
@@ -82,20 +99,7 @@ const FirstSection = () => {
         md={6}
         sm={12}
         xs={12}
-        sx={
-          md
-            ? {
-                display: "flex",
-                justifyContent: "end",
-                alignItems: "start",
-              }
-            : {
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }
-        }
+        className={classes.textGrid}
       >
         <Box
           sx={{

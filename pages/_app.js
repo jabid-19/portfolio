@@ -37,20 +37,21 @@ function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        {/* <Box sx={{ width: "100%", transform: "rotate(90deg)" }}>
-          <LinearProgress />
-        </Box> */}
 
         {loading ? (
           <Box
             sx={{
               height: "100vh",
               display: "flex",
+              flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <LoadingPulse />
+            <LinearProgress sx={{ width: "100%" }} />
+            <LinearProgress sx={{ width: "100%" }} />
+            <LinearProgress sx={{ width: "100%" }} />
+            {/* <LoadingPulse /> */}
           </Box>
         ) : (
           <Component {...pageProps} />
