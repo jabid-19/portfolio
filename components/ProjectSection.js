@@ -1,18 +1,6 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
-
-import {
-  Container,
-  Grid,
-  Box,
-  Typography,
-  IconButton,
-  Link,
-  LinearProgress,
-  Button,
-} from "@mui/material";
+import { Grid, Box, Typography, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import imageLoader from "../helper/imageLoader";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -20,49 +8,34 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontSize: "6rem",
     fontWeight: "400",
-    // transform: "rotate(-90deg)",
-    // height: "100%",
   },
   uiContainer: {
-    //   display: -webkit-box;
-    // display: -ms-flexbox;
     display: "flex",
-    // -webkit-box-pack: 'center';
-    //     -ms-flex-pack: center;
     justifyContent: "center",
-    // -webkit-box-align: center;
-    //     -ms-flex-align: center;
     alignItems: "start",
-    // margin: "0 10px",
     overflow: "hidden",
   },
   uiCard: {
-    // -webkit-box-flex: 1;
-    // -ms-flex: 1;
     flex: 1,
     margin: "0 5px",
-    // -webkit-transition: all 1s ease-in-out;
     transition: "all 1.3s ease-in-out",
     height: "450px",
     position: "relative",
-    // margin: "0, 1000px",
-    // -webkit-box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
-    //         box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    // boxShadow:
+    //   "12px 12px 50px 0 rgba(189,112,69,.25), 0px 0px 12px -40px rgba(255, 255, 255, 0.3)",
     // transform: "rotate(0deg) skew(-5deg)",
 
     "&:hover": {
       flexGrow: "10",
-
       "& .MuiBox-root": {
         display: "flex",
         alignItems: "center",
         textAlign: "center",
         top: "calc(100% - 2em)",
         color: "white",
-        background: "#BD7045",
+        background: "#  ",
         opacity: 0.9,
         fontSize: "2rem",
-        // -webkit-transform: rotate(0deg) skew(-5deg);
         transform: "rotate(0deg) ",
       },
 
@@ -75,27 +48,20 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     background: " #BD7045",
     padding: " 0.5em",
-    // -webkit-transform: rotate(-90deg);
     transform: " rotate(-90deg)",
-    // -webkit-transform-origin: 0% 0%;
     transformOrigin: "0% 0%",
-    // -webkit-transition: all 0.5s ease-in-out;
     transition: "all 0.5s ease-in-out",
-    // minWidth: "max-content",
     minWidth: "max-content",
     textAlign: "center",
     position: "absolute",
     bottom: 0,
     left: 0,
     fontSize: "1.2rem",
-    // whiteSpace: "nowrap",
   },
   uiImage: {
     width: "100%",
     height: "100%",
-    // -o-object-fit: 'cover',
     objectFit: "cover",
-    // -webkit-transition: 'all 1s ease-in-out',
     transition: "all 1s ease-in-out",
     filter: "grayscale(1)",
   },

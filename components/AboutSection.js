@@ -1,15 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 
-import {
-  Container,
-  Grid,
-  Box,
-  Typography,
-  IconButton,
-  Link,
-  LinearProgress,
-} from "@mui/material";
+import { Grid, Box, Typography, LinearProgress } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../helper/imageLoader";
@@ -21,15 +13,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "6rem",
     fontWeight: "400",
     transform: "rotate(90deg)",
-    // height: "100%",
   },
   textLg: {
     fontSize: "6rem",
     fontWeight: "400",
     marginBottom: "20px",
-
-    // transform: "rotate(90deg)",
-    // height: "100%",
   },
   stackText: {
     fontSize: "2rem",
@@ -49,14 +37,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "300px",
     },
-    // letterSpacing: ".1rem",
   },
 }));
 
 const AboutSection = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const sm = useMediaQuery(theme.breakpoints.down("sm"));
   const md = useMediaQuery(theme.breakpoints.down("md"));
 
   const stacks = [
@@ -146,7 +132,6 @@ const AboutSection = () => {
     <Grid
       container
       sx={{
-        // height: "100vh",
         color: "white",
       }}
     >
@@ -208,13 +193,10 @@ const AboutSection = () => {
             <Grid
               container
               rowSpacing={5}
-              // spacing={1}
               sx={{
                 marginTop: "10px",
                 color: "#919191",
                 maxWidth: "700px",
-
-                // border: "1px solid #BD7045",
               }}
             >
               {stacks.map((stack) => (
@@ -225,6 +207,7 @@ const AboutSection = () => {
                     }}
                   >
                     <Image
+                      priority
                       loader={imageLoader}
                       src={stack.source}
                       width={"26"}

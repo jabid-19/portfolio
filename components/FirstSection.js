@@ -1,14 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
-import {
-  Container,
-  Grid,
-  Box,
-  Typography,
-  IconButton,
-  Link,
-  LinearProgress,
-} from "@mui/material";
+import { Grid, Box, Typography, LinearProgress } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../helper/imageLoader";
@@ -68,7 +60,6 @@ const FirstSection = () => {
   const classes = useStyles();
   const theme = useTheme();
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
-  const md = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     AOS.init();

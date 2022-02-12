@@ -1,14 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Block } from "@mui/icons-material";
-import {
-  Container,
-  Box,
-  Grid,
-  Typography,
-  TextField,
-  Button,
-  IconButton,
-} from "@mui/material";
+import { Box, Typography, TextField, Button, IconButton } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import { createStyles, makeStyles, withStyles } from "@mui/styles";
 // import AOS from "aos";
@@ -18,13 +9,9 @@ import { createStyles, makeStyles, withStyles } from "@mui/styles";
 
 const useStyle = makeStyles((theme) => ({
   mainBox: {
-    // background: "#1D1A27",
     border: "5px solid #626262",
-    // borderStyle: "solid solid none solid",
-    // borderRadius: "30px",
     boxShadow: "#626262",
     padding: "80px 0px",
-    // maxHeight: "580px",
     width: "100%",
     backdropFilter: "blur(100px)",
     display: "flex",
@@ -33,11 +20,9 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       justifyContent: "left",
-      // paddingBottom: '50px',
     },
   },
   newsletterTitle: {
-    // fontWeight: "bold",
     fontSize: "2rem",
     lineHeight: "55px",
     marginBottom: "20px",
@@ -90,34 +75,11 @@ const useStyle = makeStyles((theme) => ({
       marginLeft: "20px",
       marginBottom: "20px",
     },
-    // [theme.breakpoints.only('xs')]: {
-    //   width: '80%',
-    // },
   },
 }));
 
 const Contact = () => {
   const classes = useStyle();
-  const WhiteTextField = withStyles({
-    root: {
-      "& ..MuiInputLabel": {
-        color: "#fff", // Text color
-      },
-      "& .MuiInputBase-input": {
-        color: "#fff", // Text color
-      },
-      "& .MuiInput-underline": {
-        borderBottom: "1px solid #BD7045",
-      },
-      "&:after": {
-        borderBottom: "2px solid #BD7045",
-        // borderBottom: `2px solid ${theme.palette.secondary.main}`
-      },
-      // '&:hover:not($disabled):not($focused):not($error):before': {
-      //   borderBottom: '2px solid rgba(255, 91, 202, 1)',
-      // },
-    },
-  })(TextField);
 
   // AOS initialization
   // useEffect(() => {
@@ -156,7 +118,6 @@ const Contact = () => {
 
   return (
     <>
-      {/* <Container data-aos="fade-up" data-aos-duration="900"> */}
       <Box className={classes.mainBox}>
         <Box
           data-aos="zoom-in"
@@ -172,24 +133,15 @@ const Contact = () => {
                 color: "#BD7045",
                 width: "200px",
                 height: "200px",
-                // marginTop: "10px",
                 boxShadow: "0 0 0 #BD7045",
                 animation: "pulse 2s infinite",
                 "& :hover": {
                   transition: "all 1700ms cubic-bezier(0.19, 1, 0.22, 1)",
                   transform: "scale(1.2)",
-                  // backgroundColor: "#BD7045",
                 },
               }}
             >
-              <Typography
-                variant="h4"
-                // className={classes.newsletterSubTitle}
-              >
-                My CV
-              </Typography>
-
-              {/* <DownloadIcon fontSize="large" /> */}
+              <Typography variant="h4">My CV</Typography>
             </IconButton>
           </Box>
         </Box>
@@ -246,7 +198,6 @@ const Contact = () => {
           </form>
         </Box>
       </Box>
-      {/* </Container> */}
       {/* <CustomAlert
         open={popupError}
         severity={severity}

@@ -1,16 +1,6 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
 import { useRouter } from "next/router";
-import {
-  Container,
-  Grid,
-  Box,
-  Typography,
-  IconButton,
-  ImageList,
-  ImageListItem,
-  LinearProgress,
-} from "@mui/material";
+import { Grid, Box, Typography, ImageList, ImageListItem } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../helper/imageLoader";
@@ -51,7 +41,6 @@ const itemData = [
   {
     img: "/images/ui-section/gym.png",
     title: "Burger",
-    // rows: 2,
     cols: 2,
     link: "https://www.behance.net/gallery/132045179/GYM-LANE",
   },
