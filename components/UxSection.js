@@ -144,12 +144,15 @@ const UxSection = () => {
               backgroundColor: "#626262",
             }}
           >
-            <CardActionArea>
+            <CardActionArea
+              href="https://www.figma.com/proto/8TvYhBORrmlWvw1dfpbm4C/Xhopy?node-id=0%3A1"
+              target="_blank"
+            >
               <CardMedia
                 component="img"
                 height="300"
                 image="./images/ux-section/xhopy.jpg"
-                alt="green iguana"
+                alt="xhopy"
               />
               {/* <CardContent sx={{ backgroundColor: "#626262", color: "#fff" }}>
                 <Typography gutterBottom variant="h5" component="div">
@@ -199,12 +202,15 @@ const UxSection = () => {
               },
             }}
           >
-            <CardActionArea>
+            <CardActionArea
+              href="https://www.figma.com/proto/PZDJfOflAEXUrfApab59c2/Bugseen?page-id=0%3A1&node-id=2%3A2&starting-point-node-id=2%3A2"
+              target="_blank"
+            >
               <CardMedia
                 component="img"
                 height="300"
                 image="./images/project-section/bugseen.jpg"
-                alt="green iguana"
+                alt="bugseen"
               />
               {/* <CardContent sx={{ backgroundColor: "#77636e", color: "#fff" }}>
                 <Typography gutterBottom variant="h5" component="div">
@@ -231,12 +237,15 @@ const UxSection = () => {
               backgroundColor: "#f6b28a",
             }}
           >
-            <CardActionArea>
+            <CardActionArea
+              href="https://www.figma.com/proto/Tlt2tREJY11CCclN3Y9far/Mobile-eco?page-id=0%3A1&node-id=4%3A154&starting-point-node-id=4%3A154"
+              target="_blank"
+            >
               <CardMedia
                 component="img"
                 height="300"
                 image="./images/ux-section/jenni.jpg"
-                alt="green iguana"
+                alt="jenni"
               />
               {/* <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import {
   Container,
   Grid,
@@ -45,27 +46,32 @@ const itemData = [
     title: "Breakfast",
     rows: 2,
     cols: 2,
+    link: "https://www.behance.net/gallery/116545921/V-mobile",
   },
   {
     img: "/images/ui-section/gym.png",
     title: "Burger",
     // rows: 2,
     cols: 2,
+    link: "https://www.behance.net/gallery/132045179/GYM-LANE",
   },
   {
     img: "/images/ui-section/cox.png",
     title: "Camera",
     rows: 2,
+    link: "https://www.behance.net/gallery/96744373/BD-Travel-App",
   },
   {
     img: "/images/ui-section/barber.png",
     title: "Coffee",
     cols: 2,
+    link: "https://www.behance.net/gallery/132045417/The-Barber-Shop",
   },
   {
     img: "/images/ui-section/bigmen.png",
     title: "Hats",
     cols: 2,
+    link: "https://www.behance.net/gallery/132045325/Big-Men",
   },
   {
     img: "/images/ui-section/limo.png",
@@ -73,36 +79,44 @@ const itemData = [
     author: "@arwinneil",
     rows: 2,
     cols: 2,
+    link: "https://www.behance.net/gallery/132045509/LIMO-Music",
   },
   {
     img: "/images/ui-section/toy.png",
     title: "Fern",
+    link: "https://www.behance.net/jabidhasan",
   },
   {
     img: "/images/ui-section/grove.png",
     title: "Basketball",
+    link: "https://www.behance.net/jabidhasan",
   },
   {
     img: "/images/ui-section/ridin.png",
     title: "Fern",
+    link: "https://www.behance.net/gallery/96607277/RideIN",
   },
   {
     img: "/images/ui-section/foodon.png",
     title: "Fern",
+    link: "https://www.behance.net/gallery/96541503/FoodON-Website",
   },
   {
     img: "/images/ui-section/fitbit.png",
     title: "Fern",
     cols: 2,
+    link: "https://www.behance.net/gallery/96541503/FoodON-Website",
   },
   {
     img: "/images/ui-section/social.png",
     title: "Fern",
+    link: "https://www.behance.net/gallery/117634713/Social-landing-page",
   },
   {
     img: "/images/ui-section/triyoga.png",
     title: "Fern",
     cols: 2,
+    link: "https://www.behance.net/gallery/97245037/TriYoga-Website",
   },
 ];
 
@@ -119,6 +133,11 @@ const UiSection = () => {
   const classes = useStyles();
   const theme = useTheme();
   const md = useMediaQuery(theme.breakpoints.down("md"));
+
+  const route = useRouter();
+  const openLink = (link) => {
+    route.push(link);
+  };
 
   useEffect(() => {
     AOS.init();
@@ -166,6 +185,7 @@ const UiSection = () => {
                 cols={item.cols || 1}
                 rows={item.rows || 1}
                 className={classes.image}
+                onClick={() => openLink(item.link)}
               >
                 <img
                   {...srcset(item.img, 121, item.rows, item.cols)}

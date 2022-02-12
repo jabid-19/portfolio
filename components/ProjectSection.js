@@ -54,6 +54,8 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: "10",
 
       "& .MuiBox-root": {
+        display: "flex",
+        alignItems: "center",
         textAlign: "center",
         top: "calc(100% - 2em)",
         color: "white",
@@ -80,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     // -webkit-transition: all 0.5s ease-in-out;
     transition: "all 0.5s ease-in-out",
     // minWidth: "max-content",
-    minWidth: "100%",
+    minWidth: "max-content",
     textAlign: "center",
     position: "absolute",
     bottom: 0,
@@ -107,6 +109,7 @@ const ProjectSection = () => {
       id: 1,
       source: "./images/project-section/eucaps.jpg",
       title: "Eucaps",
+      link: "https://www.eucaps.com/",
     },
     {
       id: 2,
@@ -115,11 +118,13 @@ const ProjectSection = () => {
       margin: {
         marginTop: "100px",
       },
+      link: "https://www.neovotech.com/",
     },
     {
       id: 3,
       source: "./images/project-section/t4t.jpg",
       title: "Tools 4 Trader",
+      link: "https://tools4trader.com/",
     },
     {
       id: 4,
@@ -128,11 +133,13 @@ const ProjectSection = () => {
       margin: {
         marginTop: "100px",
       },
+      link: "https://www.xpillarengineering.com/",
     },
     {
       id: 5,
       source: "./images/project-section/bugseen.jpg",
       title: "Bugseen",
+      link: "http://bugseen.com/",
     },
   ];
 
@@ -173,6 +180,17 @@ const ProjectSection = () => {
                 <img className={classes.uiImage} src={project.source} />
                 <Box className={classes.cardHead}>
                   <Typography variant="">{project.title}</Typography>
+                  <Button
+                    href={project.link}
+                    target="_blank"
+                    color="secondary"
+                    variant="contained"
+                    disableElevation
+                    size="small"
+                    sx={{ marginLeft: "10px", marginTop: "5px" }}
+                  >
+                    visit
+                  </Button>
                 </Box>
               </Box>
             ))}

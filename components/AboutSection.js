@@ -239,6 +239,8 @@ const AboutSection = () => {
         </Box>
       </Grid>
       <Grid
+        data-aos="fade-down-left"
+        data-aos-duration="2500"
         item
         md={2}
         sm={12}
@@ -249,7 +251,7 @@ const AboutSection = () => {
         }}
       >
         {!md && (
-          <Box data-aos="fade-down-left" data-aos-duration="2500">
+          <Box>
             <Typography variant="h1" className={classes.text}>
               AB<span style={{ color: "#BD7045" }}>O</span>UT
             </Typography>

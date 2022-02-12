@@ -5,7 +5,8 @@ import Link from "next/link";
 import { Container, AppBar, Box, IconButton, Button, Fab } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import { makeStyles } from "@mui/styles";
+import { makeStyles, useTheme } from "@mui/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../../helper/imageLoader";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -39,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = () => {
   const classes = useStyles();
+  const theme = useTheme();
+
+  const sm = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <AppBar
@@ -55,27 +59,27 @@ const Footer = () => {
         <Box className={classes.iconSection}>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <LinkedInIcon fontSize="large" />
+              <LinkedInIcon fontSize={sm ? "large" : "medium"} />
             </a>
           </Link>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <FormatBoldIcon fontSize="large" />
+              <FormatBoldIcon fontSize={sm ? "large" : "medium"} />
             </a>
           </Link>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <TwitterIcon fontSize="large" />
+              <TwitterIcon fontSize={sm ? "large" : "medium"} />
             </a>
           </Link>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <FacebookIcon fontSize="large" />
+              <FacebookIcon fontSize={sm ? "large" : "medium"} />
             </a>
           </Link>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <InstagramIcon fontSize="large" />
+              <InstagramIcon fontSize={sm ? "large" : "medium"} />
             </a>
           </Link>
         </Box>

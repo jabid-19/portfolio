@@ -29,13 +29,6 @@ const useStyles = makeStyles((theme) => ({
       scrollSnapAlign: "none",
     },
   },
-  childNoSnap: {
-    overflow: "hidden",
-    display: "flex",
-    alignItems: "center",
-    minHeight: "100vh",
-    paddingTop: "100px",
-  },
 }));
 
 export default function Home() {
@@ -48,22 +41,22 @@ export default function Home() {
       <Nav />
 
       <Box>
-        <Box className={classes.child}>
+        <Box id="landing" className={classes.child}>
           <FirstSection />
         </Box>
-        <Box className={classes.child}>
+        <Box id="about" className={classes.child}>
           <AboutSection />
         </Box>
-        <Box className={classes.child}>
+        <Box id="projects" className={classes.child}>
           <ProjectSection />
         </Box>
-        <Box className={classes.child}>
+        <Box id="ui" className={classes.child}>
           <UiSection />
         </Box>
-        <Box className={classes.child}>
+        <Box id="ux" className={classes.child}>
           <UxSection />
         </Box>
-        <Box className={classes.child}>
+        <Box id="contact" className={classes.child}>
           <Contact />
         </Box>
 

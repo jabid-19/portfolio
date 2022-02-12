@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: "blur(60px)",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
-      minHeight: "80px",
+      minHeight: "90px",
     },
   },
   navContainer: {
@@ -150,8 +150,8 @@ const Nav = ({
                 loader={imageLoader}
                 src={"./logo.png"}
                 // alt="Logo of Neovotech"
-                width={!sm ? "65" : "40"}
-                height={!sm ? "90" : "55"}
+                width={!sm ? "65" : "50"}
+                height={!sm ? "90" : "65"}
                 className={classes.logo}
                 // onClick={scrollToTop}
               />
@@ -159,7 +159,7 @@ const Nav = ({
           </Box>
 
           <Box className={classes.links}>
-            <Link to="services" smooth={true} offset={-200} duration={50}>
+            <Link to="about" smooth={true} offset={-200} duration={50}>
               <Button
                 // data-aos="zoom-in"
                 // data-aos-duration="1500"
@@ -170,7 +170,7 @@ const Nav = ({
                 About me
               </Button>
             </Link>
-            <Link to="reference" smooth={true} offset={-250} duration={50}>
+            <Link to="projects" smooth={true} offset={-250} duration={50}>
               <Button
                 // data-aos="zoom-in"
                 // data-aos-duration="1500"
@@ -181,7 +181,7 @@ const Nav = ({
                 Projects
               </Button>
             </Link>
-            <Link to="vision" smooth={true} offset={-100} duration={50}>
+            <Link to="ui" smooth={true} offset={150} duration={50}>
               <Button
                 // data-aos="zoom-in"
                 // data-aos-duration="1500"
@@ -192,28 +192,33 @@ const Nav = ({
                 UI designs
               </Button>
             </Link>
-            <Button
-              // data-aos="zoom-in"
-              // data-aos-duration="1500"
-              href="/about-us"
-              className={classes.linksButton}
-              // onClick={scrollToComponent()}
-            >
-              UX designs
-            </Button>
-            <Button
-              // data-aos="zoom-in"
-              // data-aos-duration="1500"
-              href="/about-us"
-              className={classes.linksButton}
-              // onClick={scrollToComponent()}
-            >
-              Contact
-            </Button>
+            <Link to="ux" smooth={true} offset={-100} duration={50}>
+              <Button
+                // data-aos="zoom-in"
+                // data-aos-duration="1500"
+
+                className={classes.linksButton}
+                // onClick={scrollToComponent()}
+              >
+                UX designs
+              </Button>
+            </Link>
+
+            <Link to="contact" smooth={true} offset={-100} duration={50}>
+              <Button
+                // data-aos="zoom-in"
+                // data-aos-duration="1500"
+
+                className={classes.linksButton}
+                // onClick={scrollToComponent()}
+              >
+                Contact
+              </Button>
+            </Link>
           </Box>
 
           {/* Mobile View */}
-          <Box className={classes.mobileMenu}>
+          {/* <Box className={classes.mobileMenu}>
             <IconButton
               // aria-controls="fade-menu"
               // aria-haspopup="true"
@@ -228,7 +233,7 @@ const Nav = ({
               scrollToVision={scrollToVision}
               scrollToBanner={scrollToBanner}
             />
-          </Box>
+          </Box> */}
           {/* End Mobile View */}
         </Container>
       </AppBar>
