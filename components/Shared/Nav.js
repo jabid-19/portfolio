@@ -219,7 +219,7 @@ const Nav = ({
               // aria-haspopup="true"
               onClick={handleClick}
             >
-              <MenuIcon className={classes.menuIcon} />
+              <MenuIcon fontSize="large" className={classes.menuIcon} />
             </IconButton>
             <Sidebar
               open={open}

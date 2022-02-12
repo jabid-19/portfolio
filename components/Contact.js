@@ -199,7 +199,7 @@ const Contact = () => {
             color="#626262"
             className={classes.newsletterTitle}
           >
-            I would love to hear from you.
+            I would love to hear from you
           </Typography>
           <form ref={form} onSubmit={sendEmail}>
             <TextField

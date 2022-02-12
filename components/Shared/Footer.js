@@ -55,27 +55,27 @@ const Footer = () => {
         <Box className={classes.iconSection}>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <LinkedInIcon />
+              <LinkedInIcon fontSize="large" />
             </a>
           </Link>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <FormatBoldIcon />
+              <FormatBoldIcon fontSize="large" />
             </a>
           </Link>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <TwitterIcon />
+              <TwitterIcon fontSize="large" />
             </a>
           </Link>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <FacebookIcon />
+              <FacebookIcon fontSize="large" />
             </a>
           </Link>
           <Link href="#">
             <a className={classes.socialIcon}>
-              <InstagramIcon />
+              <InstagramIcon fontSize="large" />
             </a>
           </Link>
         </Box>

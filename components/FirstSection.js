@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "8.5rem",
     fontWeight: "400",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "7.2rem",
+      fontSize: "6.3rem",
     },
   },
   title: {
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: ".25rem",
     color: "#BD7045",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1.3rem",
+      fontSize: "1.2rem",
     },
   },
   imageGrid: {
