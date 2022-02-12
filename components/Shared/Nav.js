@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: "blur(60px)",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
-      minHeight: "55px",
+      minHeight: "80px",
     },
   },
   navContainer: {

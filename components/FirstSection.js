@@ -94,8 +94,8 @@ const FirstSection = () => {
           priority
           loader={imageLoader}
           src={"./images/landing-section/avatar.webp"}
-          width={sm ? "280" : "590"}
-          height={sm ? "390" : "800"}
+          width={sm ? "295" : "590"}
+          height={sm ? "410" : "800"}
         />
       </Grid>
       <Grid

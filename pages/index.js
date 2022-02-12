@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
   },
   child: {
     overflow: "hidden",
-
     display: "flex",
     alignItems: "center",
     minHeight: "100vh",
@@ -26,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "100px",
     [theme.breakpoints.down("sm")]: {
       alignItems: "start",
-      paddingTop: "50px",
+      paddingTop: "70px",
       scrollSnapAlign: "none",
     },
   },
