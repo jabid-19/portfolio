@@ -3,7 +3,8 @@ import Image from "next/image";
 import { Container, AppBar, Box, IconButton, Button, Fab } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import { makeStyles } from "@mui/styles";
+import { makeStyles, useTheme } from "@mui/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../../helper/imageLoader";
 import Sidebar from "./Sidebar";
 // import AOS from "aos";
@@ -14,11 +15,13 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     display: "flex",
     justifyContent: "flex-end",
+    alignItems: "center",
     minHeight: "110px",
     backgroundColor: "rgba(24, 22, 32, 0)",
     backdropFilter: "blur(60px)",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
+      minHeight: "55px",
     },
   },
   navContainer: {
@@ -117,6 +120,8 @@ const Nav = ({
   scrollToBanner,
 }) => {
   const classes = useStyles();
+  const theme = useTheme();
+  const sm = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -145,8 +150,8 @@ const Nav = ({
                 loader={imageLoader}
                 src={"./logo.png"}
                 // alt="Logo of Neovotech"
-                width={"65"}
-                height={"90"}
+                width={!sm ? "65" : "40"}
+                height={!sm ? "90" : "55"}
                 className={classes.logo}
                 // onClick={scrollToTop}
               />

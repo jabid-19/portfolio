@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontSize: "8.5rem",
     fontWeight: "400",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "7.2rem",
+    },
   },
   title: {
     fontSize: "1.5rem",
@@ -26,13 +29,16 @@ const useStyles = makeStyles((theme) => ({
     wordSpacing: ".8rem",
     letterSpacing: ".25rem",
     color: "#BD7045",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.3rem",
+    },
   },
   imageGrid: {
     display: "flex",
     justifyContent: "start",
     alignItems: "end",
     [theme.breakpoints.down("md")]: {
-      justifyContent: "center",
+      justifyContent: "start",
       alignItems: "center",
     },
     [theme.breakpoints.down("sm")]: {
@@ -48,11 +54,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       justifyContent: "center",
-      alignItems: "center",
+      alignItems: "end",
     },
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      justifyContent: "center",
+      justifyContent: "start",
       alignItems: "end",
     },
   },
@@ -88,8 +94,8 @@ const FirstSection = () => {
           priority
           loader={imageLoader}
           src={"./images/landing-section/avatar.webp"}
-          width={sm ? "340" : "590"}
-          height={sm ? "450" : "800"}
+          width={sm ? "280" : "590"}
+          height={sm ? "390" : "800"}
         />
       </Grid>
       <Grid

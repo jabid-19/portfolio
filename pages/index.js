@@ -17,11 +17,18 @@ const useStyles = makeStyles((theme) => ({
     // marginTop: "100px",
   },
   child: {
+    overflow: "hidden",
+
     display: "flex",
     alignItems: "center",
     minHeight: "100vh",
     scrollSnapAlign: "start",
     paddingTop: "100px",
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "start",
+      paddingTop: "50px",
+      scrollSnapAlign: "none",
+    },
   },
   childNoSnap: {
     overflow: "hidden",
@@ -42,26 +49,28 @@ export default function Home() {
       <Nav />
 
       <Box>
-        <Box className={!sm ? classes.child : classes.childNoSnap}>
+        <Box className={classes.child}>
           <FirstSection />
         </Box>
-        <Box className={!sm ? classes.child : classes.childNoSnap}>
+        <Box className={classes.child}>
           <AboutSection />
         </Box>
-        <Box className={!sm ? classes.child : classes.childNoSnap}>
+        <Box className={classes.child}>
           <ProjectSection />
         </Box>
-        <Box className={!sm ? classes.child : classes.childNoSnap}>
+        <Box className={classes.child}>
           <UiSection />
         </Box>
-        <Box className={!sm ? classes.child : classes.childNoSnap}>
+        <Box className={classes.child}>
           <UxSection />
         </Box>
-        <Box className={!sm ? classes.child : classes.childNoSnap}>
+        <Box className={classes.child}>
           <Contact />
         </Box>
 
-        {!sm && <Footer />}
+        {/* {!sm && */}
+        <Footer />
+        {/* } */}
       </Box>
     </Container>
   );
