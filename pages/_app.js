@@ -42,7 +42,7 @@ function MyApp(props) {
         {loading ? (
           <Box
             sx={{
-              height: "100vh",
+              height: "95vh",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",

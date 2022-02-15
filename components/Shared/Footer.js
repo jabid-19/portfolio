@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { Container, AppBar, Box, IconButton, Button, Fab } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FormatBoldIcon from "@mui/icons-material/FormatBold";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import MailIcon from "@mui/icons-material/Mail";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -24,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   iconSection: {
     height: "60px",
-    width: "250px",
+    width: "270px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-around",
@@ -39,8 +42,14 @@ const Footer = () => {
 
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <AppBar
+      data-aos="fade-up"
+      data-aos-duration="2500"
       className={classes.appBar}
       position="fixed"
       color="primary"
@@ -52,31 +61,56 @@ const Footer = () => {
         maxWidth="xl"
       >
         <Box className={classes.iconSection}>
-          <Link href="#">
-            <a className={classes.socialIcon}>
-              <LinkedInIcon fontSize={sm ? "large" : "medium"} />
-            </a>
-          </Link>
-          <Link href="#">
-            <a className={classes.socialIcon}>
-              <FormatBoldIcon fontSize={sm ? "large" : "medium"} />
-            </a>
-          </Link>
-          <Link href="#">
-            <a className={classes.socialIcon}>
-              <TwitterIcon fontSize={sm ? "large" : "medium"} />
-            </a>
-          </Link>
-          <Link href="#">
-            <a className={classes.socialIcon}>
-              <FacebookIcon fontSize={sm ? "large" : "medium"} />
-            </a>
-          </Link>
-          <Link href="#">
-            <a className={classes.socialIcon}>
-              <InstagramIcon fontSize={sm ? "large" : "medium"} />
-            </a>
-          </Link>
+          <a
+            className={classes.socialIcon}
+            href="https://www.linkedin.com/in/jabid-hasan/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon fontSize={sm ? "large" : "medium"} />
+          </a>
+          <a
+            className={classes.socialIcon}
+            href="https://github.com/jabid-19"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon fontSize={sm ? "large" : "medium"} />
+          </a>
+          <a
+            className={classes.socialIcon}
+            href="https://www.behance.net/jabidhasan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FormatBoldIcon fontSize={sm ? "large" : "medium"} />
+          </a>
+          <a
+            className={classes.socialIcon}
+            href="https://twitter.com/Jabid_19"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TwitterIcon fontSize={sm ? "large" : "medium"} />
+          </a>
+
+          <a
+            className={classes.socialIcon}
+            href="https://www.facebook.com/jabid19/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FacebookIcon fontSize={sm ? "large" : "medium"} />
+          </a>
+
+          <a
+            className={classes.socialIcon}
+            href="mailto:jabidhasan19@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MailIcon fontSize={sm ? "large" : "medium"} />
+          </a>
         </Box>
       </Container>
     </AppBar>

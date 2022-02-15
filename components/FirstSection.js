@@ -73,7 +73,7 @@ const FirstSection = () => {
       }}
     >
       <Grid
-        data-aos="fade-up-right"
+        data-aos="zoom-in"
         data-aos-duration="2500"
         item
         md={6}
