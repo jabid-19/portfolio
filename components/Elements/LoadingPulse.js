@@ -7,14 +7,15 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontFamily: "Berkshire Swash",
+    // fontFamily: "Berkshire Swash",
+    fontFamily: "Roboto",
     fontSize: "150px",
     fontWeight: "400",
     color: "white",
     width: "200px",
     height: "200px",
     borderRadius: "50%",
-    border: "1px solid #BD7045",
+    border: "2px solid #BD7045",
     color: "#BD7045",
     boxShadow: "0 0 0 #BD7045",
     animation: "pulse 2s infinite",
@@ -26,7 +27,7 @@ const LoadingPulse = () => {
 
   return (
     <Box className={classes.root}>
-      <Box sx={{ marginBottom: "35px" }}>19</Box>
+      <Box sx={{ marginBottom: "0px" }}>19</Box>
     </Box>
   );
 };

@@ -162,7 +162,7 @@ const UiSection = () => {
           sx={{ display: "flex", alignItems: "center" }}
         >
           <ImageList
-            sx={{ width: "100%", height: "50%" }}
+            sx={{ width: "100%", height: "60%" }}
             variant="quilted"
             cols={5}
             rowHeight="auto"

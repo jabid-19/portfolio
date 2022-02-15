@@ -9,8 +9,7 @@ import { CacheProvider } from "@emotion/react";
 import createEmotionCache from "../theme/createEmotionCache";
 import theme from "../theme/theme";
 import LoadingPulse from "../components/Elements/LoadingPulse";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { Rings } from "react-loader-spinner";
+import CircleLoader from "react-spinners/CircleLoader";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -40,7 +39,7 @@ function MyApp(props) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
 
-        {loading ? (
+        {!loading ? (
           <Box
             sx={{
               height: "100vh",
@@ -50,18 +49,14 @@ function MyApp(props) {
               alignItems: "center",
             }}
           >
-            <Rings
-              height="200"
-              width="200"
-              color="#BD7045"
-              ariaLabel="loading"
-            />
+            <CircleLoader loading={loading} color="#BD7045" size={100} />
+
             {/* <PuffLoader loading={loading} color="#c84da7" size={200} /> */}
 
             {/* <LinearProgress sx={{ width: "100%" }} />
             <LinearProgress sx={{ width: "100%" }} />
             <LinearProgress sx={{ width: "100%" }} /> */}
-            {/* <LoadingPulse /> */}
+            <LoadingPulse />
           </Box>
         ) : (
           <Component {...pageProps} />
