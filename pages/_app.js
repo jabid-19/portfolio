@@ -49,7 +49,7 @@ function MyApp(props) {
               alignItems: "center",
             }}
           >
-            <CircleLoader loading={loading} color="#BD7045" size={100} />
+            {/* <CircleLoader loading={loading} color="#BD7045" size={100} /> */}
 
             {/* <PuffLoader loading={loading} color="#c84da7" size={200} /> */}
 
