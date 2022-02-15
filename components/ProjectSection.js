@@ -73,13 +73,13 @@ const ProjectSection = () => {
   const projects = [
     {
       id: 1,
-      source: "./images/project-section/eucaps.jpg",
+      source: "./images/project-section/eucaps.webp",
       title: "Eucaps",
       link: "https://www.eucaps.com/",
     },
     {
       id: 2,
-      source: "./images/project-section/neovotech.jpg",
+      source: "./images/project-section/neovotech.webp",
       title: "Neovotech",
       margin: {
         marginTop: "100px",
@@ -88,13 +88,13 @@ const ProjectSection = () => {
     },
     {
       id: 3,
-      source: "./images/project-section/t4t.jpg",
+      source: "./images/project-section/t4t.webp",
       title: "Tools 4 Trader",
       link: "https://tools4trader.com/",
     },
     {
       id: 4,
-      source: "./images/project-section/xpillar.jpg",
+      source: "./images/project-section/xpillar.webp",
       title: "Xpillar",
       margin: {
         marginTop: "100px",
@@ -103,7 +103,7 @@ const ProjectSection = () => {
     },
     {
       id: 5,
-      source: "./images/project-section/bugseen.jpg",
+      source: "./images/project-section/bugseen.webp",
       title: "Bugseen",
       link: "http://bugseen.com/",
     },

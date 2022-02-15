@@ -11,7 +11,7 @@ const useStyle = makeStyles((theme) => ({
   mainBox: {
     border: "5px solid #626262",
     boxShadow: "#626262",
-    padding: "80px 0px",
+    padding: "20px 0px",
     width: "100%",
     backdropFilter: "blur(100px)",
     display: "flex",
@@ -55,26 +55,35 @@ const useStyle = makeStyles((theme) => ({
     },
   },
   subBox: {
-    width: "70%",
+    // width: "70%",
     padding: "80px",
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     // fontFamily: 'Verdana',
-    fontStyle: "normal",
+    // fontStyle: "normal",
     [theme.breakpoints.down("md")]: {
       width: "100%",
       padding: "0px",
+      margin: "30px 0",
     },
+    [theme.breakpoints.down("sm")]: {},
   },
   rightElements: {
     margin: "13px 0px",
     border: "1px solid #BD7045",
     [theme.breakpoints.down("md")]: {
-      margin: "0",
-      width: "90%",
-      marginLeft: "20px",
+      margin: "0 20px ",
+      width: "91%",
+      // marginLeft: "20px",
       marginBottom: "20px",
     },
+  },
+  text: {
+    fontSize: "6rem",
+    fontWeight: "400",
+    color: "white",
+    // transform: "rotate(-90deg)",
   },
 }));
 
@@ -118,84 +127,97 @@ const Contact = () => {
 
   return (
     <>
-      <Box className={classes.mainBox}>
-        <Box
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-          className={classes.subBox}
-          sx={{ alignItems: "center", width: "30%" }}
-        >
-          <Box display="flex" justifyContent="start">
-            <IconButton
-              color="primary"
-              sx={{
-                border: "1px solid #BD7045",
-                color: "#BD7045",
-                width: "200px",
-                height: "200px",
-                boxShadow: "0 0 0 #BD7045",
-                animation: "pulse 2s infinite",
-                "& :hover": {
-                  transition: "all 1700ms cubic-bezier(0.19, 1, 0.22, 1)",
-                  transform: "scale(1.2)",
-                },
-              }}
-            >
-              <Typography variant="h4">My CV</Typography>
-            </IconButton>
-          </Box>
+      <Box sx={{ width: "100%" }}>
+        <Box data-aos="fade-down-left" data-aos-duration="2500">
+          <Typography variant="h2" textAlign="right" className={classes.text}>
+            CON<span style={{ color: "#BD7045" }}>T</span>ACT
+          </Typography>
         </Box>
-        <Box className={classes.subBox}>
-          <Typography
+
+        <Box className={classes.mainBox}>
+          <Box
+            className={classes.subBox}
+            sx={{ alignItems: "center", width: "30%" }}
+          >
+            <Box display="flex" justifyContent="start">
+              <Box data-aos="zoom-in" data-aos-duration="2500">
+                <IconButton
+                  color="primary"
+                  sx={{
+                    border: "1px solid #BD7045",
+                    color: "#BD7045",
+                    width: "200px",
+                    height: "200px",
+                    boxShadow: "0 0 0 #BD7045",
+                    animation: "pulse 2s infinite",
+                    "& :hover": {
+                      transition: "all 1700ms cubic-bezier(0.19, 1, 0.22, 1)",
+                      transform: "scale(1.2)",
+                    },
+                  }}
+                >
+                  <Typography variant="h4">My CV</Typography>
+                </IconButton>
+              </Box>
+            </Box>
+          </Box>
+          <Box
+            className={classes.subBox}
+            data-aos="zoom-out"
+            data-aos-duration="2500"
+          >
+            {/* <Typography
             variant="h6"
             color="#626262"
             className={classes.newsletterTitle}
           >
             I would love to hear from you
-          </Typography>
-          <form ref={form} onSubmit={sendEmail}>
-            <TextField
-              required
-              fullWidth
-              variant="filled"
-              label="Name"
-              name="name"
-              className={classes.rightElements}
-              InputLabelProps={{
-                style: { color: "#f9f2f9" },
-              }}
-            />
-            <TextField
-              required
-              fullWidth
-              variant="filled"
-              label="Email"
-              name="email"
-              className={classes.rightElements}
-              InputLabelProps={{
-                style: { color: "#f9f2f9" },
-              }}
-            />
-            <TextField
-              required
-              fullWidth
-              multiline
-              rows={4}
-              variant="filled"
-              label="Message"
-              name="email"
-              className={classes.rightElements}
-              InputLabelProps={{
-                style: { color: "#f9f2f9" },
-              }}
-            />
+          </Typography> */}
 
-            <Box display="flex" justifyContent="center">
-              <Button variant="outlined" size="large" type="submit">
-                Send
-              </Button>
-            </Box>
-          </form>
+            <form ref={form} onSubmit={sendEmail}>
+              <TextField
+                required
+                fullWidth
+                variant="filled"
+                label="Name"
+                name="name"
+                className={classes.rightElements}
+                InputLabelProps={{
+                  style: { color: "#f9f2f9" },
+                }}
+              />
+              <TextField
+                required
+                fullWidth
+                variant="filled"
+                label="Email"
+                name="email"
+                className={classes.rightElements}
+                InputLabelProps={{
+                  style: { color: "#f9f2f9" },
+                }}
+              />
+              <TextField
+                required
+                fullWidth
+                multiline
+                rows={4}
+                variant="filled"
+                label="Message"
+                name="email"
+                className={classes.rightElements}
+                InputLabelProps={{
+                  style: { color: "#f9f2f9" },
+                }}
+              />
+
+              <Box display="flex" justifyContent="center">
+                <Button variant="outlined" size="large" type="submit">
+                  Send
+                </Button>
+              </Box>
+            </form>
+          </Box>
         </Box>
       </Box>
       {/* <CustomAlert

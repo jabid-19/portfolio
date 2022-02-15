@@ -91,7 +91,7 @@ const UxSection = () => {
               <CardMedia
                 component="img"
                 height="300"
-                image="./images/ux-section/xhopy.jpg"
+                image="./images/ux-section/xhopy.webp"
                 alt="xhopy"
               />
             </CardActionArea>
@@ -141,7 +141,7 @@ const UxSection = () => {
               <CardMedia
                 component="img"
                 height="300"
-                image="./images/project-section/bugseen.jpg"
+                image="./images/project-section/bugseen.webp"
                 alt="bugseen"
               />
             </CardActionArea>
@@ -155,7 +155,7 @@ const UxSection = () => {
         >
           <Card
             data-aos="fade-up-left"
-            data-aos-duration="2500"
+            data-aos-duration="3000"
             className={classes.card}
             sx={{
               backgroundColor: "#f6b28a",
@@ -168,7 +168,7 @@ const UxSection = () => {
               <CardMedia
                 component="img"
                 height="300"
-                image="./images/ux-section/jenni.jpg"
+                image="./images/ux-section/jenni.webp"
                 alt="jenni"
               />
             </CardActionArea>

@@ -7,8 +7,8 @@ import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../../helper/imageLoader";
 import Sidebar from "./Sidebar";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Link } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: "blur(60px)",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
-      minHeight: "90px",
+      minHeight: "92px",
     },
   },
   navContainer: {
@@ -134,9 +134,9 @@ const Nav = ({
   };
 
   // AOS initialization
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <Box>
       <AppBar className={classes.appBar} position="fixed" elevation={0}>
@@ -145,8 +145,8 @@ const Nav = ({
             <Link to="landing" smooth={true} offset={-200} duration={50}>
               <Image
                 priority
-                // data-aos="zoom-in"
-                // data-aos-duration="1500"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
                 loader={imageLoader}
                 src={"./logo.png"}
                 // alt="Logo of Neovotech"
@@ -161,8 +161,8 @@ const Nav = ({
           <Box className={classes.links}>
             <Link to="about" smooth={true} offset={-200} duration={50}>
               <Button
-                // data-aos="zoom-in"
-                // data-aos-duration="1500"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
                 className={classes.linksButton}
                 size="large"
                 // onClick={scrollToServices}
@@ -172,8 +172,8 @@ const Nav = ({
             </Link>
             <Link to="projects" smooth={true} offset={-250} duration={50}>
               <Button
-                // data-aos="zoom-in"
-                // data-aos-duration="1500"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
                 className={classes.linksButton}
                 size="large"
                 // onClick={scrollToBanner}
@@ -183,8 +183,8 @@ const Nav = ({
             </Link>
             <Link to="ui" smooth={true} offset={150} duration={50}>
               <Button
-                // data-aos="zoom-in"
-                // data-aos-duration="1500"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
                 className={classes.linksButton}
                 size="large"
                 // onClick={scrollToVision}
@@ -194,9 +194,8 @@ const Nav = ({
             </Link>
             <Link to="ux" smooth={true} offset={-100} duration={50}>
               <Button
-                // data-aos="zoom-in"
-                // data-aos-duration="1500"
-
+                data-aos="zoom-in"
+                data-aos-duration="1500"
                 className={classes.linksButton}
                 // onClick={scrollToComponent()}
               >
@@ -206,9 +205,8 @@ const Nav = ({
 
             <Link to="contact" smooth={true} offset={-100} duration={50}>
               <Button
-                // data-aos="zoom-in"
-                // data-aos-duration="1500"
-
+                data-aos="zoom-in"
+                data-aos-duration="1500"
                 className={classes.linksButton}
                 // onClick={scrollToComponent()}
               >

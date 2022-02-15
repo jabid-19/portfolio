@@ -48,7 +48,7 @@ const AboutSection = () => {
   const stacks = [
     {
       id: 1,
-      source: "./images/about-section/js.png",
+      source: "./images/about-section/js.webp",
       title: "JavaScript",
     },
     {
@@ -94,7 +94,7 @@ const AboutSection = () => {
     },
     {
       id: 10,
-      source: "./images/about-section/xd.png",
+      source: "./images/about-section/xd.webp",
       title: "XD",
     },
     {
