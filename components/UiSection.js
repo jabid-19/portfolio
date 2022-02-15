@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { Grid, Box, Typography, ImageList, ImageListItem } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import imageLoader from "../helper/imageLoader";
+// import imageLoader from "../helper/imageLoader";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -13,13 +13,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "400",
     color: "white",
   },
-  title: {
-    fontSize: "1.7rem",
-    fontWeight: "600",
-    wordSpacing: ".8rem",
-    letterSpacing: ".25rem",
-    color: "#626262",
-  },
+
   image: {
     cursor: "pointer",
     transform: "scale(1)",

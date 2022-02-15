@@ -7,7 +7,6 @@ import {
   CardMedia,
   CardActionArea,
 } from "@mui/material";
-
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import AOS from "aos";

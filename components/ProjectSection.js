@@ -9,13 +9,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "6rem",
     fontWeight: "400",
   },
-  uiContainer: {
+  projectContainer: {
     display: "flex",
     justifyContent: "center",
     alignItems: "start",
     overflow: "hidden",
   },
-  uiCard: {
+  projectCard: {
     flex: 1,
     margin: "0 5px",
     transition: "all 1.3s ease-in-out",
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     fontSize: "1.2rem",
   },
-  uiImage: {
+  projectImage: {
     width: "100%",
     height: "100%",
     objectFit: "cover",
@@ -135,15 +135,15 @@ const ProjectSection = () => {
           <Box
             data-aos="fade-up"
             data-aos-duration="2500"
-            className={classes.uiContainer}
+            className={classes.projectContainer}
           >
             {projects.map((project) => (
               <Box
                 key={project.id}
-                className={classes.uiCard}
+                className={classes.projectCard}
                 style={project.margin}
               >
-                <img className={classes.uiImage} src={project.source} />
+                <img className={classes.projectImage} src={project.source} />
                 <Box className={classes.cardHead}>
                   <Typography variant="">{project.title}</Typography>
                   <Button

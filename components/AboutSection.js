@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-
 import { Grid, Box, Typography, LinearProgress } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";

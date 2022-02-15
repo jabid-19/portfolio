@@ -1,6 +1,5 @@
-import { Container, Box, LinearProgress } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import Nav from "../components/Shared/Nav";
-
 import FirstSection from "../components/FirstSection";
 import AboutSection from "../components/AboutSection";
 import ProjectSection from "../components/ProjectSection";

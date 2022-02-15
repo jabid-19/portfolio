@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
-
 import { Container, AppBar, Box, IconButton, Button, Fab } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import imageLoader from "../../helper/imageLoader";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";

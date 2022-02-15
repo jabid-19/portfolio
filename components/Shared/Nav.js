@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { Container, AppBar, Box, IconButton, Button, Fab } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import { Container, AppBar, Box, Button } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../../helper/imageLoader";
-import Sidebar from "./Sidebar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
@@ -54,61 +51,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   linksButton: {
-    minWidth: "100px",
-    my: 2,
+    // minWidth: "100px",
+    // my: 2,
     color: "white",
     fontSize: "16px",
-
+    padding: "1",
     textTransform: "lowercase",
     [theme.breakpoints.down("md")]: {
-      fontSize: "13px",
-    },
-  },
-  chatSection: {
-    flex: "1",
-    display: "flex",
-    justifyContent: "flex-end",
-  },
-  btnBorder: {
-    position: "relative",
-    background: "linear-gradient(to left, #FF5BCA, #7353E5)",
-    borderRadius: "50px",
-    padding: "1px",
-    boxShadow: "0px 20px 50px rgba(0, 0, 0, 0.5)",
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
-  },
-  chatBtn: {
-    minWidth: "200px",
-    color: "#ffffff",
-    textTransform: "capitalize",
-    fontSize: "14.5px",
-    padding: "8px 20px",
-    borderRadius: "50px",
-    background: "rgba(19, 17, 26, 1)",
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
-  },
-  mobileMenu: {
-    display: "none",
-    color: "white",
-    [theme.breakpoints.down("md")]: {
-      display: "flex",
-    },
-  },
-  menuIcon: {
-    color: "white",
-  },
-  floatingBtn: {
-    display: "none",
-    position: "fixed",
-    bottom: "50px",
-    right: "50px",
-    zIndex: "99",
-    [theme.breakpoints.down("md")]: {
-      display: "block",
+      // fontSize: "2rem",
     },
   },
 }));
@@ -122,16 +72,6 @@ const Nav = ({
   const classes = useStyles();
   const theme = useTheme();
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   // AOS initialization
   useEffect(() => {
@@ -165,6 +105,7 @@ const Nav = ({
                 data-aos-duration="1500"
                 className={classes.linksButton}
                 size="large"
+                color="primary"
                 // onClick={scrollToServices}
               >
                 About me
@@ -176,6 +117,7 @@ const Nav = ({
                 data-aos-duration="1500"
                 className={classes.linksButton}
                 size="large"
+                color="primary"
                 // onClick={scrollToBanner}
               >
                 Projects
@@ -187,6 +129,7 @@ const Nav = ({
                 data-aos-duration="1500"
                 className={classes.linksButton}
                 size="large"
+                color="primary"
                 // onClick={scrollToVision}
               >
                 UI designs
@@ -197,6 +140,8 @@ const Nav = ({
                 data-aos="zoom-in"
                 data-aos-duration="1500"
                 className={classes.linksButton}
+                size="large"
+                color="primary"
                 // onClick={scrollToComponent()}
               >
                 UX designs
@@ -207,7 +152,15 @@ const Nav = ({
               <Button
                 data-aos="zoom-in"
                 data-aos-duration="1500"
-                className={classes.linksButton}
+                // className={classes.linksButton}
+                size="large"
+                // color="primary"
+                sx={{
+                  color: "#ca8c6a",
+                  fontSize: "18px",
+                  padding: "1",
+                  textTransform: "lowercase",
+                }}
                 // onClick={scrollToComponent()}
               >
                 Contact

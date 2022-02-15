@@ -22,46 +22,12 @@ const useStyle = makeStyles((theme) => ({
       justifyContent: "left",
     },
   },
-  newsletterTitle: {
-    fontSize: "2rem",
-    lineHeight: "55px",
-    marginBottom: "20px",
-    [theme.breakpoints.down("lg")]: {
-      fontSize: "2.3rem",
-    },
-    [theme.breakpoints.down("md")]: {
-      fontSize: "2.5rem",
-      marginTop: "20px",
-      marginLeft: "20px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      textAlign: "center",
-      fontSize: "2rem",
-      marginLeft: "0px",
-    },
-  },
-  newsletterSubTitle: {
-    fontWeight: "normal",
-    fontSize: "20px",
-    lineHeight: "33px",
-    [theme.breakpoints.down("md")]: {
-      fontSize: "1rem",
-      marginLeft: "20px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      margin: "0 10px",
-      textAlign: "center",
-      lineHeight: "25px",
-    },
-  },
+
   subBox: {
-    // width: "70%",
     padding: "80px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    // fontFamily: 'Verdana',
-    // fontStyle: "normal",
     [theme.breakpoints.down("md")]: {
       width: "100%",
       padding: "0px",
@@ -75,7 +41,6 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       margin: "0 20px ",
       width: "91%",
-      // marginLeft: "20px",
       marginBottom: "20px",
     },
   },
