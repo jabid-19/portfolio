@@ -39,7 +39,7 @@ function MyApp(props) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
 
-        {!loading ? (
+        {loading ? (
           <Box
             sx={{
               height: "100vh",
