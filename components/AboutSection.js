@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
   },
   stackText: {
     fontSize: "2rem",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2.7rem",
+    },
   },
 
   mainText: {
@@ -182,11 +185,29 @@ const AboutSection = () => {
             data-aos-duration="2500"
             sx={{ marginLeft: "50px", marginTop: "50px" }}
           >
-            <Box sx={{ width: "250px" }}>
+            {/* <Box sx={{ width: "250px" }}>
               <Typography className={classes.stackText} variant="h4">
                 My stacks
               </Typography>
-              <LinearProgress sx={{ margin: "8px 0", width: "170px" }} />
+              <LinearProgress sx={{ margin: "8px 0" }} />
+            </Box> */}
+
+            <Box
+              sx={{
+                width: "max-content",
+              }}
+            >
+              <Typography variant="body1" className={classes.stackText}>
+                My stacks
+              </Typography>
+              <Box
+                sx={{
+                  width: "100%",
+                  marginTop: "1px",
+                }}
+              >
+                <LinearProgress />
+              </Box>
             </Box>
 
             <Grid
