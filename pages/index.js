@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     minHeight: "100vh",
-    scrollSnapAlign: "start",
+    // scrollSnapAlign: "start",
     paddingTop: "100px",
     [theme.breakpoints.down("sm")]: {
       alignItems: "start",

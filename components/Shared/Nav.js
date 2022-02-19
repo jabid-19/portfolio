@@ -38,9 +38,7 @@ const useStyles = makeStyles((theme) => ({
     width: "600px",
     display: "flex",
     flexDirection: "row",
-    // flex: "2",
     justifyContent: "space-around",
-
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
@@ -56,19 +54,14 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "16px",
     padding: "1",
-    textTransform: "lowercase",
+    textTransform: "none",
     [theme.breakpoints.down("md")]: {
       // fontSize: "2rem",
     },
   },
 }));
 
-const Nav = ({
-  scrollToTop,
-  scrollToServices,
-  scrollToVision,
-  scrollToBanner,
-}) => {
+const Nav = ({}) => {
   const classes = useStyles();
   const theme = useTheme();
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
@@ -84,7 +77,7 @@ const Nav = ({
           <Box className={classes.logoSection}>
             <Link to="landing" smooth={true} offset={-200} duration={50}>
               <Image
-                priority
+                // priority
                 data-aos="zoom-in"
                 data-aos-duration="1500"
                 loader={imageLoader}
@@ -99,7 +92,7 @@ const Nav = ({
           </Box>
 
           <Box className={classes.links}>
-            <Link to="about" smooth={true} offset={-200} duration={50}>
+            <Link to="about" smooth={true} duration={50}>
               <Button
                 data-aos="zoom-in"
                 data-aos-duration="1500"
@@ -108,10 +101,10 @@ const Nav = ({
                 color="primary"
                 // onClick={scrollToServices}
               >
-                About me
+                {"about me"}
               </Button>
             </Link>
-            <Link to="projects" smooth={true} offset={-250} duration={50}>
+            <Link to="projects" smooth={true} duration={50}>
               <Button
                 data-aos="zoom-in"
                 data-aos-duration="1500"
@@ -120,10 +113,10 @@ const Nav = ({
                 color="primary"
                 // onClick={scrollToBanner}
               >
-                Projects
+                {"projects"}
               </Button>
             </Link>
-            <Link to="ui" smooth={true} offset={150} duration={50}>
+            <Link to="ui" offset={150} smooth={true} duration={50}>
               <Button
                 data-aos="zoom-in"
                 data-aos-duration="1500"
@@ -132,10 +125,10 @@ const Nav = ({
                 color="primary"
                 // onClick={scrollToVision}
               >
-                UI designs
+                {"ui designs"}
               </Button>
             </Link>
-            <Link to="ux" smooth={true} offset={-100} duration={50}>
+            <Link to="ux" smooth={true} duration={50}>
               <Button
                 data-aos="zoom-in"
                 data-aos-duration="1500"
@@ -144,26 +137,27 @@ const Nav = ({
                 color="primary"
                 // onClick={scrollToComponent()}
               >
-                UX designs
+                {"ux designs"}
               </Button>
             </Link>
 
-            <Link to="contact" smooth={true} offset={-100} duration={50}>
+            <Link to="contact" smooth={true} duration={50}>
               <Button
                 data-aos="zoom-in"
                 data-aos-duration="1500"
                 // className={classes.linksButton}
                 size="large"
-                // color="primary"
+                color="primary"
                 sx={{
                   color: "#ca8c6a",
                   fontSize: "18px",
+                  fontWeight: "600",
                   padding: "1",
                   textTransform: "lowercase",
                 }}
                 // onClick={scrollToComponent()}
               >
-                Contact
+                {"contact"}
               </Button>
             </Link>
           </Box>

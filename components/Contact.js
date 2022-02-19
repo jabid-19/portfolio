@@ -37,7 +37,7 @@ const useStyle = makeStyles((theme) => ({
   },
   rightElements: {
     margin: "13px 0px",
-    border: "1px solid #BD7045",
+    border: "1px solid #fff",
     [theme.breakpoints.down("md")]: {
       margin: "0 20px ",
       width: "91%",
@@ -107,6 +107,8 @@ const Contact = () => {
             <Box display="flex" justifyContent="start">
               <Box data-aos="zoom-in" data-aos-duration="2500">
                 <IconButton
+                  href="https://drive.google.com/file/d/1ZbfoDBUTC8PfkC8VrF4renk0Z2WYgm3I/view?usp=sharing"
+                  target="_blank"
                   color="primary"
                   sx={{
                     border: "1px solid #BD7045",
@@ -148,7 +150,7 @@ const Contact = () => {
                 name="name"
                 className={classes.rightElements}
                 InputLabelProps={{
-                  style: { color: "#f9f2f9" },
+                  style: { color: "#BD7045" },
                 }}
               />
               <TextField
@@ -159,7 +161,7 @@ const Contact = () => {
                 name="email"
                 className={classes.rightElements}
                 InputLabelProps={{
-                  style: { color: "#f9f2f9" },
+                  style: { color: "#BD7045" },
                 }}
               />
               <TextField
@@ -172,13 +174,25 @@ const Contact = () => {
                 name="email"
                 className={classes.rightElements}
                 InputLabelProps={{
-                  style: { color: "#f9f2f9" },
+                  style: { color: "#BD7045" },
                 }}
               />
 
               <Box display="flex" justifyContent="center">
-                <Button variant="outlined" size="large" type="submit">
-                  Send
+                <Button
+                  variant="outlined"
+                  size="large"
+                  color="primary"
+                  type="submit"
+                  sx={{
+                    // width: "300px",
+                    margin: "13px 0px",
+
+                    // border: "1px solid #fff",
+                    // color: "white",
+                  }}
+                >
+                  Send Queries
                 </Button>
               </Box>
             </form>

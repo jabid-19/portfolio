@@ -9,8 +9,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FormatBoldIcon from "@mui/icons-material/FormatBold";
 import MailIcon from "@mui/icons-material/Mail";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -42,14 +42,14 @@ const Footer = () => {
 
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init();
+  // }, []);
 
   return (
     <AppBar
-      data-aos="fade-up"
-      data-aos-duration="2500"
+      // data-aos="fade-up"
+      // data-aos-duration="2500"
       className={classes.appBar}
       position="fixed"
       color="primary"

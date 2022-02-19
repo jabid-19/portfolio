@@ -6,6 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../helper/imageLoader";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import avatar from "../public/images/landing-section/avatar.webp";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -73,8 +74,8 @@ const FirstSection = () => {
       }}
     >
       <Grid
-        data-aos="zoom-in"
-        data-aos-duration="2500"
+        // data-aos="zoom-in"
+        // data-aos-duration="2500"
         item
         md={6}
         sm={12}
@@ -82,16 +83,18 @@ const FirstSection = () => {
         className={classes.imageGrid}
       >
         <Image
-          priority
+          eager
           loader={imageLoader}
-          src={"./images/landing-section/avatar.webp"}
+          src={avatar}
           width={sm ? "295" : "590"}
           height={sm ? "410" : "800"}
+          placeholder="blur"
+          layout="intrinsic"
         />
       </Grid>
       <Grid
-        data-aos="fade-down-left"
-        data-aos-duration="2500"
+        // data-aos="fade-down-left"
+        // data-aos-duration="2500"
         item
         md={6}
         sm={12}
