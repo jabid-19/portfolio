@@ -88,8 +88,8 @@ const FirstSection = () => {
           src={avatar}
           width={sm ? "295" : "590"}
           height={sm ? "410" : "800"}
-          placeholder="blur"
-          layout="intrinsic"
+          // placeholder="blur"
+          // layout="intrinsic"
         />
       </Grid>
       <Grid
