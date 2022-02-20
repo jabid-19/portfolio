@@ -2,10 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { Box, Typography, TextField, Button, IconButton } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import { createStyles, makeStyles, withStyles } from "@mui/styles";
+import LoadingButton from "@mui/lab/LoadingButton";
+import SendIcon from "@mui/icons-material/Send";
+
 // import AOS from "aos";
 // import "aos/dist/aos.css";
-// import emailjs from "@emailjs/browser";
-// import CustomAlert from "../Elements/Alert";
+import emailjs from "@emailjs/browser";
+import CustomAlert from "../components/Elements/Alert";
 
 const useStyle = makeStyles((theme) => ({
   mainBox: {
@@ -36,8 +39,12 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {},
   },
   rightElements: {
+    color: "#fff",
     margin: "13px 0px",
     border: "1px solid #fff",
+    "& .MuiInputBase-input": {
+      color: "#fff", // Text color
+    },
     [theme.breakpoints.down("md")]: {
       margin: "0 20px ",
       width: "91%",
@@ -50,10 +57,22 @@ const useStyle = makeStyles((theme) => ({
     color: "white",
     // transform: "rotate(-90deg)",
   },
+  sendButtonBox: {
+    "& .Mui-disabled": {
+      color: "#fff ",
+      border: "1px solid #fff",
+    },
+  },
+  sendButton: {
+    margin: "13px 0px",
+    textTransform: "none",
+  },
 }));
 
 const Contact = () => {
   const classes = useStyle();
+
+  const [loading, setLoading] = useState(false);
 
   // AOS initialization
   // useEffect(() => {
@@ -64,20 +83,24 @@ const Contact = () => {
   const form = useRef();
 
   const sendEmail = async (e) => {
+    setLoading(true);
+
     e.preventDefault();
 
-    const res = await fetch(`/api/newsletterEmailCredentials`);
+    const res = await fetch(`/api/emailCredentials`);
     const data = await res.json();
 
     emailjs
       .sendForm(data.SERVICE_ID, data.TEMPLATE_ID, form.current, data.USER_ID)
       .then(
         (result) => {
+          setLoading(false);
           setSeverity("success");
           setPopupError(true);
-          setErrorMessage("You have subscribed successfully");
+          setErrorMessage("Successfully delivered!");
         },
         (error) => {
+          setLoading(false);
           setSeverity("error");
           setPopupError(true);
           setErrorMessage("Something went wrong.");
@@ -133,14 +156,6 @@ const Contact = () => {
             data-aos="zoom-out"
             data-aos-duration="2500"
           >
-            {/* <Typography
-            variant="h6"
-            color="#626262"
-            className={classes.newsletterTitle}
-          >
-            I would love to hear from you
-          </Typography> */}
-
             <form ref={form} onSubmit={sendEmail}>
               <TextField
                 required
@@ -171,40 +186,42 @@ const Contact = () => {
                 rows={4}
                 variant="filled"
                 label="Message"
-                name="email"
+                name="message"
                 className={classes.rightElements}
                 InputLabelProps={{
                   style: { color: "#BD7045" },
                 }}
               />
 
-              <Box display="flex" justifyContent="center">
-                <Button
+              <Box
+                display="flex"
+                justifyContent="center"
+                className={classes.sendButtonBox}
+              >
+                <LoadingButton
+                  // disabled
+                  endIcon={<SendIcon />}
+                  loading={loading}
+                  loadingPosition="end"
                   variant="outlined"
                   size="large"
                   color="primary"
                   type="submit"
-                  sx={{
-                    // width: "300px",
-                    margin: "13px 0px",
-
-                    // border: "1px solid #fff",
-                    // color: "white",
-                  }}
+                  className={classes.sendButton}
                 >
                   Send Queries
-                </Button>
+                </LoadingButton>
               </Box>
             </form>
           </Box>
         </Box>
       </Box>
-      {/* <CustomAlert
+      <CustomAlert
         open={popupError}
         severity={severity}
         msg={errorMessage}
         close={setPopupError}
-      /> */}
+      />
     </>
   );
 };
