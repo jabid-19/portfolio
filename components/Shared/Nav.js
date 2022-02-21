@@ -83,7 +83,7 @@ const Nav = ({}) => {
                 loader={imageLoader}
                 src={"./logo.png"}
                 // alt="Logo of Neovotech"
-                width={!sm ? "65" : "50"}
+                width={!sm ? "65" : "47"}
                 height={!sm ? "90" : "65"}
                 className={classes.logo}
                 // onClick={scrollToTop}
