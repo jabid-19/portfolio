@@ -107,11 +107,11 @@ const UxSection = () => {
               alignItems="start"
             >
               <Typography variant="h2" className={classes.text}>
-                UX
+                U<span style={{ color: "#BD7045" }}>X</span>
               </Typography>
 
               <Typography variant="h2" className={classes.text}>
-                <span style={{ color: "#BD7045" }}> D</span>ESIGNS
+                DESI<span style={{ color: "#BD7045" }}>G</span>NS
               </Typography>
             </Box>
           </Grid>

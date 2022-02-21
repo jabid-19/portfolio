@@ -5,9 +5,9 @@ import AboutSection from "../components/AboutSection";
 import ProjectSection from "../components/ProjectSection";
 import UiSection from "../components/UiSection";
 import UxSection from "../components/UxSection";
+import ExperienceSection from "../components/ExperienceSection";
 import Contact from "../components/Contact";
 import Footer from "../components/Shared/Footer";
-
 import { makeStyles, useTheme } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
@@ -54,6 +54,9 @@ export default function Home() {
         </Box>
         <Box id="ux" className={classes.child}>
           <UxSection />
+        </Box>
+        <Box id="experiences" className={classes.child}>
+          <ExperienceSection />
         </Box>
         <Box id="contact" className={classes.child}>
           <Contact />

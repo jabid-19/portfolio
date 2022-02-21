@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   links: {
-    width: "600px",
+    width: "670px",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
@@ -140,22 +140,26 @@ const Nav = ({}) => {
                 {"ux designs"}
               </Button>
             </Link>
+            <Link to="experiences" smooth={true} duration={50}>
+              <Button
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+                className={classes.linksButton}
+                size="large"
+                color="primary"
+                // onClick={scrollToComponent()}
+              >
+                {"experiences"}
+              </Button>
+            </Link>
 
             <Link to="contact" smooth={true} duration={50}>
               <Button
                 data-aos="zoom-in"
                 data-aos-duration="1500"
-                // className={classes.linksButton}
+                className={classes.linksButton}
                 size="large"
                 color="primary"
-                sx={{
-                  color: "#ca8c6a",
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  padding: "1",
-                  textTransform: "lowercase",
-                }}
-                // onClick={scrollToComponent()}
               >
                 {"contact"}
               </Button>

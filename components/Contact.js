@@ -61,11 +61,13 @@ const useStyle = makeStyles((theme) => ({
     "& .Mui-disabled": {
       color: "#fff ",
       border: "1px solid #fff",
+      borderRadius: "0",
     },
   },
   sendButton: {
     margin: "13px 0px",
     textTransform: "none",
+    borderRadius: "0",
   },
 }));
 

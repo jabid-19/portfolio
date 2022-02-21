@@ -139,11 +139,11 @@ const UiSection = () => {
         >
           <Box display="flex" flexDirection="column" alignItems="start">
             <Typography textAlign="right" variant="h2" className={classes.text}>
-              UI
+              <span style={{ color: "#BD7045" }}>U</span>I
             </Typography>
 
             <Typography variant="h2" className={classes.text}>
-              <span style={{ color: "#BD7045" }}> D</span>ESIGNS
+              DES<span style={{ color: "#BD7045" }}>I</span>GNS
             </Typography>
           </Box>
         </Grid>
