@@ -83,7 +83,7 @@ const FirstSection = () => {
         className={classes.imageGrid}
       >
         <Image
-          eager
+          eager="true"
           loader={imageLoader}
           src={avatar}
           width={sm ? "295" : "590"}

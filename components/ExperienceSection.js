@@ -105,8 +105,9 @@ const ExperienceSection = () => {
               flexWrap: "wrap",
             }}
           >
-            {experienceData.map((item) => (
+            {experienceData.map((item, index) => (
               <Box
+                key={index}
                 data-aos="zoom-in"
                 data-aos-duration="2500"
                 sx={{
