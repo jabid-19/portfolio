@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       justifyContent: "start",
-      alignItems: "start",
+      alignItems: "center",
     },
   },
 
@@ -80,14 +80,15 @@ const FirstSection = () => {
         md={6}
         sm={12}
         xs={12}
+        sx={{ paddingTop: "13px" }}
         className={classes.imageGrid}
       >
         <Image
           eager="true"
           loader={imageLoader}
           src={avatar}
-          width={sm ? "295" : "600"}
-          height={sm ? "410" : "760"}
+          width={sm ? "310" : "600"}
+          height={sm ? "400" : "760"}
           // placeholder="blur"
           // layout="intrinsic"
         />
