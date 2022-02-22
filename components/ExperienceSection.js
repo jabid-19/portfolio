@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   logo: {
-    marginBottom: "100px",
+    margin: "100px, 0",
   },
   stackText: {
     color: "#fff",
@@ -31,35 +31,35 @@ const useStyles = makeStyles((theme) => ({
 
 const experienceData = [
   {
-    img: "/images/experience-section/eucaps.png",
+    img: "/images/experience-section/eucaps.webp",
     title: "Front-End Engineer",
-    since: "July 2021 - Present",
+    since: "June 2021 - Present",
     width: 230,
-    height: 70,
+    height: 65,
   },
   {
-    img: "/images/experience-section/netcoden.png",
+    img: "/images/experience-section/netcoden.webp",
     title: "Intern at Tect Department",
     since: "September 2020 - November 2020",
-    width: 220,
-    height: 90,
+    width: 190,
+    height: 80,
   },
   {
-    img: "/images/experience-section/ipa.png",
+    img: "/images/experience-section/ipa.webp",
     title: "Research Collaborator",
     since: "August 2018",
-    width: 240,
-    height: 90,
+    width: 210,
+    height: 75,
   },
   {
-    img: "/images/experience-section/lict.png",
+    img: "/images/experience-section/lict.webp",
     title: "Top-Up IT Training",
     since: "Credential ID: G046245",
     width: 230,
     height: 90,
   },
   {
-    img: "/images/experience-section/ict.png",
+    img: "/images/experience-section/ict.webp",
     title: "Idea Workshop for Mobile Apps Development",
     since: "Issued May 2017",
     width: 250,
@@ -111,17 +111,19 @@ const ExperienceSection = () => {
                 data-aos="zoom-in"
                 data-aos-duration="2500"
                 sx={{
+                  padding: "20px 0",
                   minWidth: "200px",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  justifyContent: "space-around",
                   flex: "0 0 33.333333333%",
                   border: "2px solid #BD7045",
                 }}
               >
                 <Box
                   sx={{
-                    height: "160px",
+                    // height: "100px",
                     display: "flex",
                     alignItems: "center",
                   }}
@@ -156,19 +158,15 @@ const ExperienceSection = () => {
                   display="flex"
                   flexDirection="column"
                   alignItems="center"
-                  sx={{ color: "#fff", marginBottom: "20px" }}
+                  sx={{ color: "#fff", marginTop: "20px" }}
                 >
-                  <Typography
-                    textAlign="center"
-                    variant="body1"
-                    sx={{ color: "#fff" }}
-                  >
+                  <Typography textAlign="center" variant="body1">
                     {item.title}
                   </Typography>
                   <Typography
                     textAlign="center"
                     variant="body2"
-                    sx={{ color: "#fff" }}
+                    sx={{ fontStyle: "italic" }}
                   >
                     {item.since}
                   </Typography>

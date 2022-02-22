@@ -6,7 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../helper/imageLoader";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import avatar from "../public/images/landing-section/avatar.webp";
+import avatar from "../public/images/landing-section/avatar2.webp";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -86,8 +86,8 @@ const FirstSection = () => {
           eager="true"
           loader={imageLoader}
           src={avatar}
-          width={sm ? "295" : "590"}
-          height={sm ? "410" : "800"}
+          width={sm ? "295" : "600"}
+          height={sm ? "410" : "760"}
           // placeholder="blur"
           // layout="intrinsic"
         />

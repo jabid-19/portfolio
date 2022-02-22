@@ -59,7 +59,12 @@ function MyApp(props) {
             <LoadingPulse />
           </Box>
         ) : (
-          <Component {...pageProps} />
+          <>
+            <div className="bg"></div>
+            <div className="bg bg2"></div>
+            <div className="bg bg3"></div>
+            <Component {...pageProps} />
+          </>
         )}
       </ThemeProvider>
     </CacheProvider>

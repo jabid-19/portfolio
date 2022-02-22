@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   links: {
-    width: "670px",
+    width: "720px",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
@@ -55,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     padding: "1",
     textTransform: "none",
+    "&:hover": {
+      color: "#BD7045",
+    },
     [theme.breakpoints.down("md")]: {
       // fontSize: "2rem",
     },

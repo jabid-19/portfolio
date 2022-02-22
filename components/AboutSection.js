@@ -124,6 +124,11 @@ const AboutSection = () => {
       source: "./images/about-section/wordpress.webp",
       title: "Wordpress",
     },
+    {
+      id: 16,
+      source: "./images/about-section/cypress.webp",
+      title: "Cypress",
+    },
   ];
 
   useEffect(() => {
