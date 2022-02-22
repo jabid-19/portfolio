@@ -185,11 +185,7 @@ const AboutSection = () => {
             my knowledge of business strategy because I want to build products
             that are economically impactful & extensible.
           </Typography>
-          <Box
-            data-aos="fade-up-right"
-            data-aos-duration="2500"
-            sx={{ marginLeft: "50px", marginTop: "50px" }}
-          >
+          <Box sx={{ marginLeft: "50px", marginTop: "50px" }}>
             {/* <Box sx={{ width: "250px" }}>
               <Typography className={classes.stackText} variant="h4">
                 My stacks
@@ -202,10 +198,17 @@ const AboutSection = () => {
                 width: "max-content",
               }}
             >
-              <Typography variant="body1" className={classes.stackText}>
+              <Typography
+                data-aos="fade-right"
+                data-aos-duration="2500"
+                variant="body1"
+                className={classes.stackText}
+              >
                 My stacks
               </Typography>
               <Box
+                data-aos="fade-left"
+                data-aos-duration="2500"
                 sx={{
                   width: "100%",
                   marginTop: "1px",
@@ -225,7 +228,15 @@ const AboutSection = () => {
               }}
             >
               {stacks.map((stack) => (
-                <Grid key={stack.id} item md={2} sm={3} xs={3}>
+                <Grid
+                  data-aos="zoom-in"
+                  data-aos-duration="2500"
+                  key={stack.id}
+                  item
+                  md={2}
+                  sm={3}
+                  xs={3}
+                >
                   <Box
                     sx={{
                       textAlign: "center",

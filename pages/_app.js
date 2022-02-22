@@ -60,9 +60,9 @@ function MyApp(props) {
           </Box>
         ) : (
           <>
-            <div className="bg"></div>
+            {/* <div className="bg"></div>
             <div className="bg bg2"></div>
-            <div className="bg bg3"></div>
+            <div className="bg bg3"></div> */}
             <Component {...pageProps} />
           </>
         )}

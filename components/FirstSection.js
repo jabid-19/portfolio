@@ -6,7 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import imageLoader from "../helper/imageLoader";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import avatar from "../public/images/landing-section/avatar2.webp";
+import avatar from "../public/images/landing-section/avatar3.webp";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       justifyContent: "start",
       alignItems: "center",
+      paddingTop: "13px",
     },
   },
 
@@ -80,7 +81,6 @@ const FirstSection = () => {
         md={6}
         sm={12}
         xs={12}
-        sx={{ paddingTop: "13px" }}
         className={classes.imageGrid}
       >
         <Image
