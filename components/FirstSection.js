@@ -8,6 +8,24 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import avatar from "../public/images/landing-section/avatar3.webp";
 
+const float = (theme) => ({
+  "@keyframes float": {
+    "0%": {
+      boxShadow: "0 5px 15px 0px rgba(0, 0, 0, 0.6)",
+      transform: " translatey(0px)",
+    },
+    "50%": {
+      boxShadow: "0 25px 15px 0px rgba(0, 0, 0, 0.2)",
+      /* transform: translatex(40px); */
+      transform: "scale(1.1)",
+    },
+    "100%": {
+      boxShadow: "0 5px 15px 0px rgba(0, 0, 0, 0.6)",
+      transform: "translatey(0px)",
+    },
+  },
+});
+
 const useStyles = makeStyles((theme) => ({
   text: {
     fontSize: "8.5rem",
@@ -30,6 +48,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "start",
     alignItems: "start",
+    animation: "$float 6s ease-in-out infinite",
+
     [theme.breakpoints.down("md")]: {
       justifyContent: "start",
       alignItems: "center",
@@ -54,6 +74,22 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
       justifyContent: "start",
       alignItems: "end",
+    },
+  },
+
+  "@keyframes float": {
+    "0%": {
+      boxShadow: "0 5px 15px 0px rgba(0, 0, 0, 0.6)",
+      transform: " translatey(0px)",
+    },
+    "50%": {
+      boxShadow: "0 25px 15px 0px rgba(0, 0, 0, 0.2)",
+      /* transform: translatex(40px); */
+      transform: "scale(1.1)",
+    },
+    "100%": {
+      boxShadow: "0 5px 15px 0px rgba(0, 0, 0, 0.6)",
+      transform: "translatey(0px)",
     },
   },
 }));
@@ -82,7 +118,7 @@ const FirstSection = () => {
         sm={12}
         xs={12}
         className={classes.imageGrid}
-        className="avatar"
+        // className="avatar"
       >
         <Image
           eager="true"
