@@ -13,9 +13,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "start",
     alignItems: "start",
-    minHeight: "110px",
+    // minHeight: "250px",
     backgroundColor: "rgba(24, 22, 32, 0)",
     // backdropFilter: "blur(60px)",
+    // paddingTop: "20px",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
       minHeight: "92px",
@@ -27,23 +28,39 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "start",
   },
   logoSection: {
+    marginLeft: "50px",
     flex: "1",
     display: "flex",
     justifyContent: "flex-start",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "10px",
+    },
+  },
+  logoBox: {
+    display: "flex",
+    alignItems: "center",
+    minHeight: "120px",
+    backgroundColor: "rgba(24, 22, 32, 0)",
+    backdropFilter: "blur(60px)",
+    border: "3px solid #ca8c6a",
+    borderStyle: "none none solid solid",
+    padding: "15px",
+    [theme.breakpoints.down("md")]: {
+      // alignItems: "center",
+      minHeight: "50px",
+    },
   },
   logo: {
     cursor: "pointer",
   },
   links: {
-    // sx={{
-    height: "100%",
+    minHeight: "100px",
     backgroundColor: "rgba(24, 22, 32, 0)",
     backdropFilter: "blur(60px)",
     padding: "20px",
-    // }}
     width: "720px",
     display: "flex",
-    flexDirection: "row",
+    alignItems: "center",
     justifyContent: "space-around",
     [theme.breakpoints.down("md")]: {
       display: "none",
@@ -86,13 +103,7 @@ const Nav = ({}) => {
       <AppBar className={classes.appBar} position="fixed" elevation={0}>
         <Container className={classes.navContainer} maxWidth={false}>
           <Box className={classes.logoSection}>
-            <Box
-              sx={{
-                backgroundColor: "rgba(24, 22, 32, 0)",
-                backdropFilter: "blur(60px)",
-                padding: "5px",
-              }}
-            >
+            <Box className={classes.logoBox}>
               <Link to="landing" smooth={true} offset={-200} duration={50}>
                 <Image
                   // priority

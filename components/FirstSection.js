@@ -49,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "start",
     alignItems: "start",
     animation: "$float 6s ease-in-out infinite",
-
     [theme.breakpoints.down("md")]: {
       justifyContent: "start",
       alignItems: "center",
