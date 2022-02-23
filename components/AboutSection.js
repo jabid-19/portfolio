@@ -151,8 +151,8 @@ const AboutSection = () => {
       >
         <Box
           className={classes.textBox}
-          data-aos="fade-down-right"
-          data-aos-duration="2500"
+          // data-aos="fade-down-right"
+          // data-aos-duration="2500"
         >
           {md && (
             <Typography

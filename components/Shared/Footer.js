@@ -34,6 +34,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#626262",
     backdropFilter: "blur(20px)",
   },
+
+  socialIcon: {
+    color: "#fff",
+    transition: "all 0.3s ease-in-out",
+
+    "&:hover": {
+      color: "#c37e58",
+      transform: "scale(1.1)",
+    },
+  },
 }));
 
 const Footer = () => {

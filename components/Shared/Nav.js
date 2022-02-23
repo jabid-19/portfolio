@@ -11,11 +11,11 @@ import { Link } from "react-scroll";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
+    justifyContent: "start",
+    alignItems: "start",
     minHeight: "110px",
     backgroundColor: "rgba(24, 22, 32, 0)",
-    backdropFilter: "blur(60px)",
+    // backdropFilter: "blur(60px)",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
       minHeight: "92px",
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   navContainer: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
+    alignItems: "start",
   },
   logoSection: {
     flex: "1",
@@ -35,6 +35,12 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   links: {
+    // sx={{
+    height: "100%",
+    backgroundColor: "rgba(24, 22, 32, 0)",
+    backdropFilter: "blur(60px)",
+    padding: "20px",
+    // }}
     width: "720px",
     display: "flex",
     flexDirection: "row",
@@ -53,10 +59,12 @@ const useStyles = makeStyles((theme) => ({
     // my: 2,
     color: "white",
     fontSize: "16px",
-    padding: "1",
     textTransform: "none",
+    // transition: "all 1.5s ease-in-out",
+
     "&:hover": {
-      color: "#BD7045",
+      color: "#ca8c6a",
+      // transform: "scale(2.1)",
     },
     [theme.breakpoints.down("md")]: {
       // fontSize: "2rem",
@@ -76,22 +84,30 @@ const Nav = ({}) => {
   return (
     <Box>
       <AppBar className={classes.appBar} position="fixed" elevation={0}>
-        <Container className={classes.navContainer} maxWidth="xl">
+        <Container className={classes.navContainer} maxWidth={false}>
           <Box className={classes.logoSection}>
-            <Link to="landing" smooth={true} offset={-200} duration={50}>
-              <Image
-                // priority
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-                loader={imageLoader}
-                src={"./logo.png"}
-                // alt="Logo of Neovotech"
-                width={!sm ? "65" : "47"}
-                height={!sm ? "90" : "65"}
-                className={classes.logo}
-                // onClick={scrollToTop}
-              />
-            </Link>
+            <Box
+              sx={{
+                backgroundColor: "rgba(24, 22, 32, 0)",
+                backdropFilter: "blur(60px)",
+                padding: "5px",
+              }}
+            >
+              <Link to="landing" smooth={true} offset={-200} duration={50}>
+                <Image
+                  // priority
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                  loader={imageLoader}
+                  src={"./logo.png"}
+                  // alt="Logo of Neovotech"
+                  width={!sm ? "65" : "47"}
+                  height={!sm ? "90" : "65"}
+                  className={classes.logo}
+                  // onClick={scrollToTop}
+                />
+              </Link>
+            </Box>
           </Box>
 
           <Box className={classes.links}>

@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   imageGrid: {
     display: "flex",
     justifyContent: "start",
-    alignItems: "end",
+    alignItems: "start",
     [theme.breakpoints.down("md")]: {
       justifyContent: "start",
       alignItems: "center",
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       justifyContent: "start",
       alignItems: "center",
-      paddingTop: "13px",
+      paddingTop: "23px",
     },
   },
 
@@ -75,13 +75,14 @@ const FirstSection = () => {
       }}
     >
       <Grid
-        // data-aos="zoom-in"
-        // data-aos-duration="2500"
+        data-aos="zoom-in"
+        data-aos-duration="2500"
         item
         md={6}
         sm={12}
         xs={12}
         className={classes.imageGrid}
+        className="avatar"
       >
         <Image
           eager="true"
