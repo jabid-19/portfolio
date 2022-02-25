@@ -109,15 +109,15 @@ const AboutSection = () => {
       source: "./images/about-section/ai.webp",
       title: "illustrator",
     },
-    {
-      id: 13,
-      source: "./images/about-section/html.webp",
-      title: "HTML5",
-    },
+    // {
+    //   id: 13,
+    //   source: "./images/about-section/html.webp",
+    //   title: "HTML5",
+    // },
     {
       id: 14,
-      source: "./images/about-section/css.webp",
-      title: "CSS3",
+      source: "./images/about-section/sass.png",
+      title: "Sass",
     },
     {
       id: 15,
@@ -128,6 +128,11 @@ const AboutSection = () => {
       id: 16,
       source: "./images/about-section/cypress.webp",
       title: "Cypress",
+    },
+    {
+      id: 17,
+      source: "./images/about-section/rive.png",
+      title: "Rive",
     },
   ];
 

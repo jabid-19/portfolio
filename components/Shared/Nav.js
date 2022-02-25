@@ -42,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "120px",
     backgroundColor: "rgba(24, 22, 32, 0)",
     backdropFilter: "blur(60px)",
-    border: "3px solid #ca8c6a",
-    borderStyle: "none none solid solid",
+    // border: "1px solid #ca8c6a",
+    // borderStyle: "none none solid solid",
     padding: "15px",
     [theme.breakpoints.down("md")]: {
       // alignItems: "center",
