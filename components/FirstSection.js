@@ -142,7 +142,7 @@ const FirstSection = () => {
           eager="true"
           loader={imageLoader}
           src={avatar}
-          width={sm ? "280" : "530"}
+          width={sm ? "270" : "520"}
           height={sm ? "400" : "760"}
           // placeholder="blur"
           // layout="intrinsic"
