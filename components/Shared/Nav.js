@@ -28,12 +28,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "start",
   },
   logoSection: {
-    marginLeft: "50px",
+    marginLeft: "35px",
     flex: "1",
     display: "flex",
     justifyContent: "flex-start",
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "10px",
+      marginLeft: "0px",
     },
   },
   logoBox: {
@@ -103,12 +103,16 @@ const Nav = ({}) => {
       <AppBar className={classes.appBar} position="fixed" elevation={0}>
         <Container className={classes.navContainer} maxWidth={false}>
           <Box className={classes.logoSection}>
-            <Box className={classes.logoBox}>
+            <Box
+              className={classes.logoBox}
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+            >
               <Link to="landing" smooth={true} offset={-200} duration={50}>
                 <Image
                   // priority
                   data-aos="zoom-in"
-                  data-aos-duration="1500"
+                  data-aos-duration="2500"
                   loader={imageLoader}
                   src={"./logo.png"}
                   // alt="Logo of Neovotech"

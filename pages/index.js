@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     // marginTop: "100px",
   },
   child: {
-    overflow: "hidden",
+    // overflow: "hidden",
     display: "flex",
     alignItems: "center",
     minHeight: "100vh",
@@ -43,22 +43,30 @@ export default function Home() {
         <Box id="landing" className={classes.child}>
           <FirstSection />
         </Box>
-        <Box id="about" className={classes.child}>
+        <Box id="about" className={classes.child} sx={{ overflow: "hidden" }}>
           <AboutSection />
         </Box>
-        <Box id="projects" className={classes.child}>
+        <Box
+          id="projects"
+          className={classes.child}
+          sx={{ overflow: "hidden" }}
+        >
           <ProjectSection />
         </Box>
-        <Box id="ui" className={classes.child}>
+        <Box id="ui" className={classes.child} sx={{ overflow: "hidden" }}>
           <UiSection />
         </Box>
-        <Box id="ux" className={classes.child}>
+        <Box id="ux" className={classes.child} sx={{ overflow: "hidden" }}>
           <UxSection />
         </Box>
-        <Box id="experiences" className={classes.child}>
+        <Box
+          id="experiences"
+          className={classes.child}
+          sx={{ overflow: "hidden" }}
+        >
           <ExperienceSection />
         </Box>
-        <Box id="contact" className={classes.child}>
+        <Box id="contact" className={classes.child} sx={{ overflow: "hidden" }}>
           <Contact />
         </Box>
 
