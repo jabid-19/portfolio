@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   imageGrid: {
+    // overflow: "visible",
     position: "relative",
     display: "flex",
     justifyContent: "start",
@@ -139,6 +140,8 @@ const FirstSection = () => {
           }}
         ></Box>
         <Image
+          data-aos="zoom-out"
+          data-aos-duration="2500"
           eager="true"
           loader={imageLoader}
           src={avatar}

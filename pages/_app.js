@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Script from "next/script";
 import { useState, useEffect, useRef } from "react";
 import "../styles/globals.css";
 import { ThemeProvider } from "@mui/material/styles";
@@ -26,6 +27,21 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-L67YFWKSTQ`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-L67YFWKSTQ', {
+              page_path: window.location.pathname,
+            });
+                `}
+      </Script>
       <Head>
         <title>Jabid Hasan</title>
         <link rel="shortcut icon" href="./favicon.png" />
