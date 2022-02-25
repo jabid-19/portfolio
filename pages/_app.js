@@ -27,7 +27,7 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <Script
+      {/* <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=G-L67YFWKSTQ`}
       />
@@ -41,7 +41,7 @@ function MyApp(props) {
               page_path: window.location.pathname,
             });
                 `}
-      </Script>
+      </Script> */}
       <Head>
         <title>Jabid Hasan</title>
         <link rel="shortcut icon" href="./favicon.png" />
