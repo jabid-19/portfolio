@@ -140,8 +140,8 @@ const FirstSection = () => {
           }}
         ></Box>
         <Image
-          data-aos="zoom-out"
-          data-aos-duration="2500"
+          // data-aos="zoom-out"
+          // data-aos-duration="2500"
           eager="true"
           loader={imageLoader}
           src={avatar}
