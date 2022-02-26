@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     // overflow: "visible",
     position: "relative",
     display: "flex",
-    justifyContent: "start",
+    justifyContent: "center",
     alignItems: "start",
     // animation: "$float 6s ease-in-out infinite",
     [theme.breakpoints.down("md")]: {
@@ -79,7 +79,18 @@ const useStyles = makeStyles((theme) => ({
   },
 
   sphere: {
+    position: "absolute",
+    top: "40px",
+    left: "90px",
+    backgroundColor: "rgba(189, 112, 69, 0.8)",
+    filter: "blur(70.053px)",
+    height: "55%",
+    width: "55%",
+    borderRadius: "50%",
     animation: "$float 4s ease-in-out infinite",
+    [theme.breakpoints.down("sm")]: {
+      left: "20px",
+    },
   },
 
   "@keyframes float": {
@@ -128,24 +139,16 @@ const FirstSection = () => {
           data-aos="zoom-in"
           data-aos-duration="2500"
           className={classes.sphere}
-          sx={{
-            position: "absolute",
-            top: "40px",
-            left: "10px",
-            backgroundColor: "rgba(189, 112, 69, 0.8)",
-            filter: "blur(70.053px)",
-            height: "50%",
-            width: "50%",
-            borderRadius: "50%",
-          }}
+          sx={{}}
         ></Box>
         <Image
           // data-aos="zoom-out"
           // data-aos-duration="2500"
-          eager="true"
+          // eager="true"
+          priority
           loader={imageLoader}
           src={avatar}
-          width={sm ? "270" : "520"}
+          width={sm ? "270" : "510"}
           height={sm ? "400" : "760"}
           // placeholder="blur"
           // layout="intrinsic"
