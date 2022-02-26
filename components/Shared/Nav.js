@@ -7,6 +7,7 @@ import imageLoader from "../../helper/imageLoader";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
+import logo from "../../public/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -114,11 +115,13 @@ const Nav = ({}) => {
                   data-aos="zoom-in"
                   data-aos-duration="2500"
                   loader={imageLoader}
-                  src={"./logo.png"}
+                  src={logo}
                   // alt="Logo of Neovotech"
                   width={!sm ? "65" : "47"}
                   height={!sm ? "90" : "65"}
                   className={classes.logo}
+                  placeholder="blur"
+
                   // onClick={scrollToTop}
                 />
               </Link>
