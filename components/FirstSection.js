@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: "40px",
     left: "90px",
-    backgroundColor: "rgba(189, 112, 69, 0.8)",
+    backgroundColor: "rgba(189, 112, 69, 0.7)",
     filter: "blur(70.053px)",
     height: "55%",
     width: "55%",
