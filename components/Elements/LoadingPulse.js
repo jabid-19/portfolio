@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     // fontFamily: "Berkshire Swash",
-    // fontFamily: "Roboto",
+    fontFamily: "Roboto",
     fontSize: "100px",
     fontWeight: "400",
     color: "white",
