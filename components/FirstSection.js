@@ -30,8 +30,17 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontSize: "8.5rem",
     fontWeight: "400",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "6.3rem",
+    // [theme.breakpoints.down("xs")]: {
+    //   fontSize: "6.3rem",
+    // },
+    // [theme.breakpoints.down("sm")]: {
+    //   fontSize: "6.5rem",
+    // },
+    // [theme.breakpoints.down("lg")]: {
+    //   fontSize: "7.8rem ",
+    // },
+    [theme.breakpoints.down("1300")]: {
+      fontSize: "6.7rem",
     },
   },
   title: {
@@ -40,6 +49,12 @@ const useStyles = makeStyles((theme) => ({
     wordSpacing: ".8rem",
     letterSpacing: ".25rem",
     color: "#BD7045",
+    [theme.breakpoints.down("1300")]: {
+      fontSize: "1.3rem",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.3rem",
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.2rem",
     },
@@ -88,8 +103,16 @@ const useStyles = makeStyles((theme) => ({
     width: "55%",
     borderRadius: "50%",
     animation: "$float 4s ease-in-out infinite",
+    [theme.breakpoints.down("1300")]: {
+      // left: "10px",
+      height: "45%",
+      width: "45%",
+    },
+    [theme.breakpoints.down("md")]: {
+      left: "10px",
+    },
     [theme.breakpoints.down("sm")]: {
-      left: "20px",
+      left: "10px",
     },
   },
 
@@ -114,6 +137,7 @@ const FirstSection = () => {
   const classes = useStyles();
   const theme = useTheme();
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
+  const md = useMediaQuery(theme.breakpoints.down("1300"));
 
   useEffect(() => {
     AOS.init();
@@ -148,8 +172,8 @@ const FirstSection = () => {
           priority
           loader={imageLoader}
           src={avatar}
-          width={sm ? "270" : "510"}
-          height={sm ? "400" : "760"}
+          width={md ? "410" : sm ? "270" : "510"}
+          height={md ? "600" : sm ? "400" : "760"}
           // placeholder="blur"
           // layout="intrinsic"
         />
