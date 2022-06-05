@@ -151,3 +151,9 @@ a {
     transform: translatey(0px);
   }
 }
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

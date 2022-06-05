@@ -47,11 +47,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    fontSize: "1.5rem",
+    textAlign: "right",
+    fontSize: "1.4rem",
     fontWeight: "600",
-    wordSpacing: ".8rem",
+    wordSpacing: ".5rem",
     letterSpacing: ".25rem",
-    color: "#BD7045",
+    background:
+      "linear-gradient(to right, #FFF 20%, #BD7045 40%, #BD7045 60%, #FFF 80%)",
+    backgroundSize: "200% auto",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    animation: "shine 2s linear infinite",
+
     [theme.breakpoints.down("1300")]: {
       fontSize: "1.3rem",
     },
@@ -207,9 +214,18 @@ const FirstSection = () => {
           </Typography>
           <Box>
             <Typography variant="body1" className={classes.title}>
-              A FRONT-END ENGINEER
+              A FRONT-END ENGINEER <br />{" "}
+              <span style={{ fontSize: "2.1rem" }}>&</span> UI/UX DESIGNER
             </Typography>
-            <Box
+            {/* <Box
+              sx={{
+                height: "2px",
+                backgroundColor: "#BD7045",
+                marginTop: "5px",
+              }}
+            ></Box> */}
+
+            {/* <Box
               sx={{
                 width: "100%",
                 height: "10px",
@@ -218,7 +234,7 @@ const FirstSection = () => {
               }}
             >
               <LinearProgress color="secondary" />
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Grid>

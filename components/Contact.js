@@ -132,7 +132,7 @@ const Contact = () => {
             <Box display="flex" justifyContent="start">
               <Box data-aos="zoom-in" data-aos-duration="2500">
                 <IconButton
-                  href="https://drive.google.com/file/d/1ZbfoDBUTC8PfkC8VrF4renk0Z2WYgm3I/view?usp=sharing"
+                  href="https://www.google.com/search?q=butterfly+effect&ref=YWJvdXQ6Ymxhbms="
                   target="_blank"
                   color="primary"
                   sx={{
@@ -148,7 +148,7 @@ const Contact = () => {
                     },
                   }}
                 >
-                  <Typography variant="h4">My CV</Typography>
+                  <Typography variant="h4">Random fact</Typography>
                 </IconButton>
               </Box>
             </Box>
