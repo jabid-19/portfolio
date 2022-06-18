@@ -34,8 +34,8 @@ const experienceData = [
     img: "/images/experience-section/eucaps.webp",
     title: "Front-End Engineer",
     since: "June 2021 - Present",
-    width: 230,
-    height: 65,
+    width: 210,
+    height: 50,
   },
   {
     img: "/images/experience-section/netcoden.webp",

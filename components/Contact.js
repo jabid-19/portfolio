@@ -148,7 +148,7 @@ const Contact = () => {
                     },
                   }}
                 >
-                  <Typography variant="h4">Random fact</Typography>
+                  <Typography variant="h4">Just a fact</Typography>
                 </IconButton>
               </Box>
             </Box>
