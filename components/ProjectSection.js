@@ -79,7 +79,7 @@ const ProjectSection = () => {
     },
     {
       id: 2,
-      source: "./images/project-section/neovotech.webp",
+      source: "./images/project-section/neovotech.png",
       title: "Neovotech",
       margin: {
         marginTop: "100px",
