@@ -253,6 +253,7 @@ const AboutSection = () => {
                       src={stack.source}
                       width={"26"}
                       height={"26"}
+                      alt={stack.title}
                     />
                     <Typography variant="body2">{stack.title}</Typography>
                   </Box>

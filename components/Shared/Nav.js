@@ -116,7 +116,7 @@ const Nav = ({}) => {
                   data-aos-duration="2500"
                   loader={imageLoader}
                   src={logo}
-                  // alt="Logo of Neovotech"
+                  alt="logo"
                   width={!sm ? "65" : "47"}
                   height={!sm ? "90" : "65"}
                   className={classes.logo}

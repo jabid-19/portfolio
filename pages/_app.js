@@ -46,6 +46,10 @@ function MyApp(props) {
         <title>Jabid Hasan</title>
         <link rel="shortcut icon" href="./favicon.png" />
         <meta
+          name="description"
+          content="I am Jabid Hasan. I have hands-on experience in Web Application Development. Along with technology, I am also focused on developing my knowledge of business strategy because I want to build products that are economically impactful & extensible."
+        />
+        <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />

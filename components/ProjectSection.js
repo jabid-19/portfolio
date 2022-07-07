@@ -143,7 +143,11 @@ const ProjectSection = () => {
                 className={classes.projectCard}
                 style={project.margin}
               >
-                <img className={classes.projectImage} src={project.source} />
+                <img
+                  className={classes.projectImage}
+                  src={project.source}
+                  alt={project.title}
+                />
                 <Box className={classes.cardHead}>
                   <Typography variant="">{project.title}</Typography>
                   <Button

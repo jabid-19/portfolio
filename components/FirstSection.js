@@ -184,6 +184,7 @@ const FirstSection = () => {
           src={avatar}
           width={md ? "410" : sm ? "270" : "510"}
           height={md ? "600" : sm ? "400" : "760"}
+          alt="SVG"
           // placeholder="blur"
           // layout="intrinsic"
         />
