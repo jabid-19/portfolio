@@ -145,6 +145,7 @@ const ExperienceSection = () => {
                     data-aos-duration="2500"
                     loader={imageLoader}
                     src={item.img}
+                    alt={item.title}
                     width={item.width}
                     height={item.height}
                     className={classes.logo}
