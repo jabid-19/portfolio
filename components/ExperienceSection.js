@@ -31,8 +31,15 @@ const useStyles = makeStyles((theme) => ({
 
 const experienceData = [
   {
+    img: "/images/experience-section/neovotech.png",
+    title: "Tech Lead (Front-End)",
+    since: "June 2021 - Present",
+    width: 210,
+    height: 50,
+  },
+  {
     img: "/images/experience-section/eucaps.webp",
-    title: "Front-End Engineer",
+    title: "Software Engineer",
     since: "June 2021 - Present",
     width: 210,
     height: 50,

@@ -142,10 +142,10 @@ const Contact = () => {
                     height: "200px",
                     boxShadow: "0 0 0 #BD7045",
                     animation: "pulse 2s infinite",
-                    "& :hover": {
-                      transition: "all 1700ms cubic-bezier(0.19, 1, 0.22, 1)",
-                      transform: "scale(1.2)",
-                    },
+                    // "& :hover": {
+                    //   transition: "all 1700ms cubic-bezier(0.19, 1, 0.22, 1)",
+                    //   transform: "scale(1.2)",
+                    // },
                   }}
                 >
                   <Typography variant="h4">Just a fact</Typography>
